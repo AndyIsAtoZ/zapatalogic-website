@@ -48,7 +48,7 @@ export default function ZapataLogicWebsite() {
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
           <div className="flex items-center gap-3">
-            <img src="/logo.png" className="h-9" />
+            <img src="/logo.png" alt="ZapataLogic logo" className="h-9" />
             <span className="font-semibold">ZapataLogic</span>
           </div>
 
@@ -93,6 +93,7 @@ export default function ZapataLogicWebsite() {
 
         <motion.img
           src="/andy.jpg"
+          alt="Andy Zapata Technology Consultant"
           className="rounded-2xl shadow-lg"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
