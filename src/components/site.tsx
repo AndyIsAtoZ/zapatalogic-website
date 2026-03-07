@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { ReactNode, useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -29,7 +30,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-3">
-          <img src="/logo.png" alt="ZapataLogic logo" className="h-9" />
+          <Image src="/logo.png" alt="ZapataLogic logo" width={138} height={36} className="h-9 w-auto" priority />
           <div>
             <div className="text-base font-semibold tracking-tight text-slate-950">ZapataLogic</div>
             <div className="hidden text-xs text-slate-500 sm:block">AI deployment. Technology advisory. Apple-first expertise.</div>

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { CTASection, PageHero, SectionIntro } from "@/components/site";
 
 export const metadata: Metadata = {
-  title: "Industries | ZapataLogic",
+  title: "Industries We Serve | ZapataLogic",
   description:
     "See how ZapataLogic applies AI deployment, technology advisory, and Apple-first expertise for professional services, creative agencies, real estate businesses, and founder-led small businesses.",
 };
@@ -34,7 +34,7 @@ export default function IndustriesPage() {
     <main>
       <PageHero
         eyebrow="Who this is for"
-        title="Industries ZapataLogic Serves"
+        title="Industries We Serve"
         description="ZapataLogic works best with growing businesses that need practical AI deployment, sharper technology decisions, and a premium advisory experience built around real operating needs."
         primaryLabel="Book a Strategy Call"
         primaryHref="/contact"
