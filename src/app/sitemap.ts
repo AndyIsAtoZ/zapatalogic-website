@@ -1,9 +1,16 @@
 export default function sitemap() {
-  return [
-    {
-      url: "https://zapatalogic.com",
-      lastModified: new Date(),
-    },
+  const routes = [
+    "",
+    "/ai-deployment",
+    "/technology-advisory",
+    "/apple-first-consulting",
+    "/industries",
+    "/about",
+    "/contact",
   ];
-}
 
+  return routes.map((route) => ({
+    url: `https://zapatalogic.com${route}`,
+    lastModified: new Date(),
+  }));
+}

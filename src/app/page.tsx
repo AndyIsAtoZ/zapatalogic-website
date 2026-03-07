@@ -1,224 +1,215 @@
-"use client";
-
-import React from "react";
-import { motion } from "framer-motion";
+import Link from "next/link";
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Cpu,
-  Workflow,
-  ShieldCheck,
-  Apple,
-  Network,
-  Lock,
-  Mail
-} from "lucide-react";
-import { useState } from "react";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger
-} from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { sendEmail } from "./actions/sendEmail";
+import { CTASection, PageHero, SectionIntro, ServiceCard } from "@/components/site";
+import { ArrowRight, Check, CircleGauge, Cpu, Layers3, ShieldCheck } from "lucide-react";
 
-const services = [
-  { icon: Cpu, title: "AI Integration", desc: "Strategic AI consulting and implementation to streamline operations, automate workflows, and improve decision-making." },
-  { icon: Workflow, title: "Process Optimization", desc: "Analyze and refine workflows to eliminate bottlenecks and align technology with business outcomes." },
-  { icon: ShieldCheck, title: "MSP Advocacy", desc: "Independent guidance to evaluate and optimize managed service provider relationships." },
-  { icon: Apple, title: "Apple Integration", desc: "Apple Certified consulting, MDM deployment, and Apple-first infrastructure strategy." },
-  { icon: Network, title: "Networking", desc: "Design and deploy secure, scalable networks including Wi‑Fi, firewall configuration, and cloud integration." },
-  { icon: Lock, title: "Security & Compliance", desc: "Implement security frameworks, identity protection, and compliance readiness strategies." }
+export const metadata: Metadata = {
+  title: "ZapataLogic | AI Deployment and Technology Advisory for Small Business",
+  description:
+    "AI deployment and technology advisory for growing small businesses, with Apple-first expertise for teams that want smarter operations and cleaner execution.",
+};
+
+const credibilityItems = [
+  "Practical AI implementation",
+  "Small business technology leadership",
+  "Apple-first expertise",
+  "Security-minded systems planning",
+  "Vendor-neutral advice",
 ];
 
-export default function ZapataLogicWebsite() {
+const outcomes = [
+  "Less wasted time across the business",
+  "Smarter workflows that support how the team actually works",
+  "Clearer technology decisions with less vendor noise",
+  "Reduced technology friction for Apple-centric teams",
+  "Stronger operational alignment as the business grows",
+];
 
-  const [open, setOpen] = useState(false);
-  const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
+const industryItems = [
+  "Professional services",
+  "Creative and agency firms",
+  "Real estate and property teams",
+  "Founder-led small businesses",
+  "Apple-centric organizations",
+];
 
+export default function HomePage() {
   return (
-    <main className="min-h-screen bg-white text-slate-900">
+    <main>
+      <PageHero
+        title="AI Deployment and Technology Advisory for Growing Small Businesses"
+        description="We help small businesses implement practical AI, improve operations, and make smarter technology decisions — with deep expertise in Apple-first environments."
+        primaryLabel="Book a Strategy Call"
+        primaryHref="/contact"
+        secondaryLabel="Explore Services"
+        secondaryHref="#service-pathways"
+      >
+        <Card className="overflow-hidden rounded-[2rem] border-slate-200 shadow-xl shadow-slate-200/70">
+          <CardContent className="p-8 md:p-10">
+            <div className="grid gap-6">
+              <div className="rounded-3xl bg-slate-950 p-6 text-white">
+                <div className="flex items-center gap-3 text-sm font-medium text-blue-200">
+                  <Cpu className="h-4 w-4" />
+                  Practical deployment over hype
+                </div>
+                <p className="mt-4 text-2xl font-semibold tracking-tight">Technology strategy that improves workflow, decision-making, and execution.</p>
+              </div>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="rounded-3xl border border-slate-200 bg-slate-50 p-5">
+                  <CircleGauge className="h-5 w-5 text-blue-700" />
+                  <p className="mt-3 text-sm font-semibold text-slate-950">Growth-focused advisory</p>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">Fractional technology guidance for companies that need smarter systems, not generic support.</p>
+                </div>
+                <div className="rounded-3xl border border-slate-200 bg-slate-50 p-5">
+                  <Layers3 className="h-5 w-5 text-blue-700" />
+                  <p className="mt-3 text-sm font-semibold text-slate-950">Apple-first specialization</p>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">A premium fit for businesses built around Apple devices, teams, and workflows.</p>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </PageHero>
 
-      {/* NAVBAR */}
-      <header className="sticky top-0 bg-white/80 backdrop-blur border-b z-50">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-
-          <div className="flex items-center gap-3">
-            <img src="/logo.png" alt="ZapataLogic logo" className="h-9" />
-            <span className="font-semibold">ZapataLogic</span>
-          </div>
-
-          <nav className="hidden md:flex gap-8 text-sm">
-            <a href="#services" className="hover:text-blue-700">Services</a>
-            <a href="#about" className="hover:text-blue-700">About</a>
-            <a href="#contact" className="hover:text-blue-700">Contact</a>
-          </nav>
-
-          <Button asChild size="sm">
-            <a href="#contact">Consult</a>
-          </Button>
-
+      <section className="border-y border-slate-200 bg-slate-50/80">
+        <div className="mx-auto grid max-w-6xl gap-4 px-6 py-6 md:grid-cols-5">
+          {credibilityItems.map((item) => (
+            <div key={item} className="rounded-full border border-slate-200 bg-white px-4 py-3 text-center text-sm font-medium text-slate-700 shadow-sm shadow-slate-200/50">
+              {item}
+            </div>
+          ))}
         </div>
-      </header>
+      </section>
 
-      {/* HERO */}
-      <section className="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
+      <section className="px-6 py-24">
+        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1fr_0.95fr] lg:items-start">
+          <SectionIntro
+            eyebrow="Core value"
+            title="Technology guidance that lands in real workflows"
+            description="ZapataLogic helps growing businesses deploy AI where it actually improves work, tighten operations, make better technology decisions, and support Apple-centric teams without adding unnecessary complexity."
+          />
+          <div className="grid gap-4">
+            {[
+              "Deploy AI into real workflows instead of chasing abstract tools.",
+              "Improve operational efficiency with practical systems thinking.",
+              "Make better decisions on vendors, platforms, and projects.",
+              "Support Apple-heavy teams with strategy that fits how they operate.",
+            ].map((item) => (
+              <div key={item} className="flex gap-4 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm shadow-slate-200/50">
+                <div className="mt-1 rounded-full bg-blue-50 p-2 text-blue-700">
+                  <Check className="h-4 w-4" />
+                </div>
+                <p className="text-base leading-7 text-slate-700">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-          <h1 className="text-5xl font-bold leading-tight">
-            Smarter Technology.
-            <span className="block text-blue-700">
-              Strategic AI Integration.
-            </span>
-          </h1>
+      <section id="service-pathways" className="bg-slate-50 px-6 py-24">
+        <div className="mx-auto max-w-6xl">
+          <SectionIntro
+            eyebrow="Primary service pathways"
+            title="Three ways ZapataLogic helps businesses run technology smarter"
+            description="The site now leads with AI deployment, strategic advisory, and Apple-first consulting instead of a broad list of disconnected services."
+          />
+          <div className="mt-12 grid gap-8 lg:grid-cols-3">
+            <ServiceCard
+              title="AI Deployment"
+              description="Identify, prioritize, and implement practical AI use cases that improve workflow and reduce wasted time."
+              href="/ai-deployment"
+              cta="Schedule an AI Strategy Call"
+            />
+            <ServiceCard
+              title="Technology Advisory"
+              description="Get strategic guidance on systems, vendors, projects, and operational technology decisions as your business grows."
+              href="/technology-advisory"
+              cta="Talk About Advisory Support"
+            />
+            <ServiceCard
+              title="Apple-First Consulting"
+              description="Build, optimize, and support business technology environments designed around Apple devices and teams."
+              href="/apple-first-consulting"
+              cta="Discuss Your Apple Environment"
+            />
+          </div>
+        </div>
+      </section>
 
-          <p className="mt-6 text-slate-600">
-            ZapataLogic modernizes business systems with AI,
-            Apple-first infrastructure, and security-driven design.
-          </p>
+      <section className="px-6 py-24">
+        <div className="mx-auto max-w-6xl">
+          <SectionIntro
+            eyebrow="Business outcomes"
+            title="Designed around better business performance, not more technical noise"
+            description="The work is meant to create operational clarity, reduce friction, and help decision-makers move with more confidence."
+            align="center"
+          />
+          <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-5">
+            {outcomes.map((item) => (
+              <Card key={item} className="rounded-[1.5rem] border-slate-200 shadow-sm shadow-slate-200/50">
+                <CardContent className="p-6">
+                  <p className="text-base font-medium leading-7 text-slate-800">{item}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
 
-          <div className="mt-8 flex gap-4">
-            <Button asChild>
-              <a href="#contact">Start Project</a>
+      <section className="bg-slate-50 px-6 py-24">
+        <div className="mx-auto max-w-6xl">
+          <SectionIntro
+            eyebrow="Ideal fit"
+            title="Built for growing businesses that need practical leadership"
+            description="ZapataLogic is especially well-suited to founder-led companies and teams that need sharper systems, clearer guidance, and executive-friendly technology decisions."
+          />
+          <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+            {industryItems.map((item) => (
+              <Card key={item} className="rounded-[1.5rem] border-slate-200 bg-white shadow-sm shadow-slate-200/50">
+                <CardContent className="p-6">
+                  <p className="text-base font-semibold text-slate-900">{item}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <div className="mt-8">
+            <Button asChild variant="outline" size="lg" className="rounded-full px-6">
+              <Link href="/industries">
+                Explore Industries
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </Button>
-            <Button variant="outline" asChild>
-              <a href="#services">Explore Services</a>
-            </Button>
-          </div>
-        </motion.div>
-
-        <motion.img
-          src="/andy.jpg"
-          alt="Andy Zapata Technology Consultant"
-          className="rounded-2xl shadow-lg"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-        />
-      </section>
-
-      {/* SERVICES */}
-      <section id="services" className="bg-slate-50 py-24">
-
-        <div className="max-w-6xl mx-auto px-6">
-
-          <h2 className="text-3xl font-bold text-center mb-14">
-            Core Services
-          </h2>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-            {services.map((s, i) => {
-              const Icon = s.icon;
-
-              return (
-                <Card key={i} className="hover:shadow-md transition">
-                  <CardContent className="p-6">
-
-                    <div className="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center mb-4">
-                      <Icon className="h-5 w-5 text-slate-700 stroke-[1.5]" />
-                    </div>
-
-                    <h3 className="font-semibold">{s.title}</h3>
-                    <p className="mt-2 text-sm text-slate-600">{s.desc}</p>
-
-                  </CardContent>
-                </Card>
-              );
-            })}
-
           </div>
         </div>
       </section>
 
-      {/* ABOUT */}
-      <section id="about" className="py-24">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-
-          <h2 className="text-3xl font-bold mb-6">
-            About ZapataLogic
-          </h2>
-
-          <p className="text-slate-600 leading-relaxed">
-            Founded by Andy Zapata, ZapataLogic bridges strategy and
-            implementation — helping organizations deploy modern,
-            secure, Apple-centric technology ecosystems.
-          </p>
-
+      <section className="px-6 py-24">
+        <div className="mx-auto grid max-w-6xl gap-10 rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm shadow-slate-200/60 md:p-12 lg:grid-cols-[1fr_0.9fr] lg:items-center">
+          <div>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-blue-700">Apple-first differentiator</p>
+            <h2 className="text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl">Especially strong for Apple-centric businesses</h2>
+            <p className="mt-5 text-base leading-7 text-slate-600 md:text-lg">
+              Apple-first is not the entire story. It is a specialization that makes ZapataLogic especially effective for businesses built around Apple devices, creative workflows, and teams that want a cleaner, more cohesive environment across the business.
+            </p>
+          </div>
+          <div className="rounded-[1.75rem] bg-slate-950 p-8 text-white">
+            <ShieldCheck className="h-6 w-6 text-blue-300" />
+            <p className="mt-4 text-xl font-semibold tracking-tight">A premium fit for companies that want Apple expertise without losing sight of the broader operating model.</p>
+            <p className="mt-4 text-sm leading-7 text-slate-300">That includes device strategy, scaling Apple-heavy teams, and integrating Apple environments into the wider business stack.</p>
+          </div>
         </div>
       </section>
 
-	  {/* CONTACT */}
-<section id="contact" className="bg-blue-700 text-white py-24 text-center">
-
-  <h2 className="text-3xl font-bold">
-    Let’s Build Smarter Systems
-  </h2>
-
-  <Dialog open={open} onOpenChange={setOpen}>
-
-    <DialogTrigger asChild>
-      <Button variant="secondary" className="mt-6">
-        Contact ZapataLogic
-      </Button>
-    </DialogTrigger>
-
-    <DialogContent>
-
-      <DialogHeader>
-        <DialogTitle>Start a Conversation</DialogTitle>
-      </DialogHeader>
-
-<form
-  action={async (formData) => {
-    setStatus("sending");
-    await sendEmail(formData);
-    setStatus("sent");
-
-    setTimeout(() => {
-      setOpen(false);
-      setStatus("idle");
-    }, 1500);
-  }}
-  className="space-y-4"
->
-
-  {/* honeypot spam trap */}
-  <input name="company" className="hidden" />
-
-  <div>
-    <Label>Name</Label>
-    <Input name="name" required />
-  </div>
-
-  <div>
-    <Label>Email</Label>
-    <Input name="email" type="email" required />
-  </div>
-
-  <div>
-    <Label>Message</Label>
-    <Textarea name="message" required />
-  </div>
-
-  <Button className="w-full" disabled={status === "sending"}>
-    {status === "sending"
-      ? "Sending..."
-      : status === "sent"
-      ? "Sent ✓"
-      : "Send Message"}
-  </Button>
-
-</form>
-
-    </DialogContent>
-
-	</Dialog>
-
-  	</section>
+      <CTASection
+        title="Ready to Deploy AI and Run Technology Smarter?"
+        description="If you need practical AI deployment, sharper technology leadership, or an Apple-first strategy that actually supports the business, the next step is a focused conversation."
+        primaryLabel="Book a Strategy Call"
+        primaryHref="/contact"
+        secondaryLabel="Contact ZapataLogic"
+        secondaryHref="/contact"
+      />
     </main>
   );
 }
