@@ -50,13 +50,13 @@ export default function HomePage() {
         <div className="mx-auto w-full max-w-[26rem]">
           <Card className="overflow-hidden rounded-[2rem] border-slate-200 shadow-xl shadow-slate-200/70">
             <CardContent className="p-0">
-              <div className="relative aspect-[4/5] w-full overflow-hidden">
+              <div className="relative aspect-[4/5] w-full overflow-hidden bg-slate-100">
                 <Image
                   src="/andy.jpg"
                   alt="Andy Zapata, founder of ZapataLogic"
                   fill
                   priority
-                  className="object-cover object-center"
+                  className="object-contain object-center"
                   sizes="(max-width: 1024px) 90vw, 420px"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/80 via-slate-950/35 to-transparent p-6 text-white">
@@ -201,12 +201,12 @@ export default function HomePage() {
       <section className="bg-slate-50 px-6 py-28">
         <div className="mx-auto grid max-w-6xl gap-10 rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm shadow-slate-200/50 md:p-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div className="relative mx-auto w-full max-w-sm overflow-hidden rounded-[1.5rem] shadow-lg shadow-slate-200/70">
-            <div className="relative aspect-[4/5] w-full">
+            <div className="relative aspect-[4/5] w-full bg-slate-100">
               <Image
                 src="/andy.jpg"
                 alt="Andy Zapata, founder"
                 fill
-                className="object-cover object-center"
+                className="object-contain object-center"
                 sizes="(max-width: 1024px) 90vw, 360px"
               />
             </div>
