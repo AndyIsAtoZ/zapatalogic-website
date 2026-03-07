@@ -44,6 +44,14 @@ export const metadata: Metadata = {
     description:
       "Practical AI deployment, technology advisory, and Apple-first consulting for growing businesses.",
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({
