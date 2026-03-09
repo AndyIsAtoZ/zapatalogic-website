@@ -3,9 +3,9 @@ import { CTASection, PageHero, SectionIntro } from "@/components/site";
 import { buildPageMetadata } from "@/lib/site";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Apple-First Consulting for Business",
+  title: "Apple Consultant for Small Business",
   description:
-    "Apple-first consulting for business environments, with Apple-certified expertise, workflow alignment, and practical guidance for growing teams.",
+    "Apple-first consulting for small business environments, with Apple-certified expertise, workflow alignment, and practical guidance for growing teams.",
   path: "/apple-first-consulting",
 });
 
@@ -22,7 +22,7 @@ export default function AppleFirstConsultingPage() {
     <main>
       <PageHero
         eyebrow="Primary service"
-        title="Apple-First Consulting for Business Environments"
+        title="Apple Consultant for Small Business Environments"
         description="ZapataLogic helps Apple-centric businesses design cleaner technology environments, reduce operational friction, and make decisions that fit how their teams actually work."
         primaryLabel="Book a Strategy Call"
         primaryHref="/contact"

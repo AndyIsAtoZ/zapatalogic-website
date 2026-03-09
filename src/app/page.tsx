@@ -4,9 +4,9 @@ import { CTASection, PageHero, SectionIntro, ServiceCard } from "@/components/si
 import { buildPageMetadata } from "@/lib/site";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Apple-First Technology Advisory for Small Business",
+  title: "Apple Consultant and Technology Advisory for Small Business",
   description:
-    "Apple-first consulting, technology advisory, and practical AI enablement for growing small businesses that want cleaner operations and smarter systems.",
+    "ZapataLogic provides Apple-first consulting, technology advisory, and practical AI enablement for small businesses that want cleaner operations, better systems decisions, and less workflow friction.",
   path: "/",
 });
 
@@ -30,8 +30,8 @@ export default function HomePage() {
   return (
     <main>
       <PageHero
-        title="Apple-First Technology Advisory for Growing Small Businesses"
-        description="ZapataLogic helps Apple-centric businesses improve operations, make smarter technology decisions, and implement practical AI and automation where they create real business value."
+        title="Apple Consultant and Technology Advisory for Growing Small Businesses"
+        description="ZapataLogic helps Apple-centric small businesses improve operations, make smarter technology decisions, and implement practical AI and automation where they create real business value."
         primaryLabel="Book a Strategy Call"
         primaryHref="/contact"
         secondaryLabel="Explore Services"
@@ -72,7 +72,7 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
           <SectionIntro
             eyebrow="Core value"
-            title="Technology strategy built for Apple-centric businesses"
+            title="Technology strategy built for Apple-centric small businesses"
             description="ZapataLogic helps growing businesses build cleaner Apple-first environments, reduce workflow friction, make better technology decisions, and implement practical automation that supports day-to-day operations."
           />
           <div className="space-y-8">

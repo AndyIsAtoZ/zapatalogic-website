@@ -3,9 +3,9 @@ import { CTASection, PageHero, SectionIntro } from "@/components/site";
 import { buildPageMetadata } from "@/lib/site";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Technology Advisory for Growing Businesses",
+  title: "Technology Advisory for Small Business",
   description:
-    "Strategic technology advisory for growing businesses, including systems guidance, vendor decisions, project prioritization, and operational alignment.",
+    "Strategic technology advisory for small businesses, including systems guidance, vendor decisions, project prioritization, and operational alignment.",
   path: "/technology-advisory",
 });
 
@@ -23,7 +23,7 @@ export default function TechnologyAdvisoryPage() {
     <main>
       <PageHero
         eyebrow="Advisory"
-        title="Technology Advisory for Growing Businesses"
+        title="Technology Advisory for Small Business Growth"
         description="ZapataLogic provides strategic technology guidance for businesses that need clearer decisions, stronger execution, and operational systems that support growth without unnecessary complexity."
         primaryLabel="Talk About Advisory Support"
         primaryHref="/contact"
