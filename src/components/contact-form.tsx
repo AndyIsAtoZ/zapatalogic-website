@@ -9,6 +9,7 @@ import { sendEmail } from "@/app/actions/sendEmail";
 
 export function ContactForm({ title = "Start a conversation", intro = "Tell us what you are trying to solve, where AI or technology friction is slowing the business down, and what a better operating environment should look like." }: { title?: string; intro?: string; }) {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState<string>("");
 
   return (
     <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm shadow-slate-200/60">
@@ -19,10 +20,12 @@ export function ContactForm({ title = "Start a conversation", intro = "Tell us w
         action={async (formData) => {
           try {
             setStatus("sending");
+            setErrorMessage("");
             await sendEmail(formData);
             setStatus("sent");
-          } catch {
+          } catch (error) {
             setStatus("error");
+            setErrorMessage(error instanceof Error ? error.message : "Something went wrong. Please try again.");
           }
         }}
         className="mt-8 space-y-5"
@@ -50,7 +53,7 @@ export function ContactForm({ title = "Start a conversation", intro = "Tell us w
         </Button>
 
         {status === "sent" ? <p className="text-sm text-emerald-600">Your message was sent.</p> : null}
-        {status === "error" ? <p className="text-sm text-red-600">Something went wrong. Please try again.</p> : null}
+        {status === "error" ? <p className="text-sm text-red-600">{errorMessage || "Something went wrong. Please try again."}</p> : null}
       </form>
     </div>
   );

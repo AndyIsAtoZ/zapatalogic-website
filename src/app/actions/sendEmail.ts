@@ -5,25 +5,35 @@ import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function sendEmail(formData: FormData) {
-  const name = formData.get("name");
-  const email = formData.get("email");
-  const message = formData.get("message");
+  const name = String(formData.get("name") || "").trim();
+  const email = String(formData.get("email") || "").trim();
+  const message = String(formData.get("message") || "").trim();
   const honeypot = formData.get("company");
 
-  // spam protection
   if (honeypot) return { ok: true };
 
-  await resend.emails.send({
-    from: "Zapatalogic <onboarding@resend.dev>",
+  if (!process.env.RESEND_API_KEY) {
+    throw new Error("RESEND_API_KEY is not configured");
+  }
+
+  const result = await resend.emails.send({
+    from: "ZapataLogic <andy@zapatalogic.com>",
     to: ["andy@zapatalogic.com"],
-    subject: "New Website Inquiry",
+    replyTo: email || undefined,
+    subject: `New Website Inquiry${name ? ` from ${name}` : ""}`,
     html: `
-      <p><b>Name:</b> ${name}</p>
-      <p><b>Email:</b> ${email}</p>
-      <p>${message}</p>
+      <p><b>Name:</b> ${name || "(missing)"}</p>
+      <p><b>Email:</b> ${email || "(missing)"}</p>
+      <p><b>Message:</b></p>
+      <p>${message || "(missing)"}</p>
     `,
   });
 
-  return { ok: true };
-}
+  if (result.error) {
+    console.error("Resend sendEmail error:", result.error);
+    throw new Error(result.error.message || "Failed to send email");
+  }
 
+  console.log("Resend sendEmail success:", result.data?.id || result);
+  return { ok: true, id: result.data?.id ?? null };
+}
