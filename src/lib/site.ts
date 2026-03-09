@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 export const siteConfig = {
   name: "ZapataLogic",
   url: "https://zapatalogic.com",
-  title: "Apple-First Technology Advisory for Small Business",
+  title: "Apple-First Technology Advisory for Small and Medium Business",
   description:
-    "ZapataLogic helps Apple-centric small businesses improve operations, make smarter technology decisions, and implement practical AI and automation where it creates real business value.",
+    "ZapataLogic helps Apple-centric small and medium businesses improve operations, make smarter technology decisions, and implement practical AI and automation where it creates real business value.",
   ogImage: "/icon.png",
   email: "andy@zapatalogic.com",
   phone: "+1-972-836-5142",

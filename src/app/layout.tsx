@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   keywords: [
     "Apple-first consulting",
     "Apple business consultant",
-    "technology advisory for small business",
-    "AI enablement for small business",
+    "technology advisory for small and medium business",
+    "AI enablement for small and medium business",
     "Apple-certified consultant",
     "Dallas Fort Worth technology consulting",
   ],

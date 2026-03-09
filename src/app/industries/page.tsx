@@ -25,7 +25,7 @@ const industries = [
     text: "Real estate and property-related businesses often need better workflow visibility, simpler technology decisions, and systems that scale with the pace of the business.",
   },
   {
-    title: "Founder-Led Small Businesses",
+    title: "Founder-Led Small and Medium Businesses",
     text: "Founder-led companies usually need clarity more than complexity. The work focuses on cleaner environments, better decision-making, and practical execution support.",
   },
   {

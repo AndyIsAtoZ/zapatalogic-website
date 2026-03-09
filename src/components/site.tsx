@@ -86,7 +86,7 @@ export function SiteFooter() {
         <div className="space-y-4">
           <p className="text-lg font-semibold tracking-tight text-slate-950">ZapataLogic</p>
           <p className="max-w-md text-sm leading-7 text-slate-600">
-            Apple-first consulting, technology advisory, and practical AI enablement for growing small businesses that want cleaner operations and smarter systems.
+            Apple-first consulting, technology advisory, and practical AI enablement for growing small and medium businesses that want cleaner operations and smarter systems.
           </p>
           <div className="flex flex-wrap gap-4 text-sm text-slate-500">
             <span className="inline-flex items-center gap-2"><MapPin className="h-4 w-4" /> Dallas–Fort Worth</span>

@@ -3,9 +3,9 @@ import { CTASection, PageHero, SectionIntro } from "@/components/site";
 import { buildPageMetadata } from "@/lib/site";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "AI Enablement for Small Business",
+  title: "AI Enablement for Small and Medium Business",
   description:
-    "Practical AI enablement for small business with workflow identification, automation opportunities, tool selection, rollout planning, and adoption support.",
+    "Practical AI enablement for small and medium business with workflow identification, automation opportunities, tool selection, rollout planning, and adoption support.",
   path: "/ai-deployment",
 });
 
@@ -23,7 +23,7 @@ export default function AIDeploymentPage() {
     <main>
       <PageHero
         eyebrow="AI capability"
-        title="Practical AI Enablement for Small Business"
+        title="Practical AI Enablement for Small and Medium Business"
         description="ZapataLogic helps growing businesses identify where AI and automation can create real operational value, choose the right tools, and implement them in a way teams can actually use."
         primaryLabel="Talk About AI Enablement"
         primaryHref="/contact"
@@ -59,7 +59,7 @@ export default function AIDeploymentPage() {
           <SectionIntro
             eyebrow="Why it matters"
             title="AI should improve execution, not add distraction"
-            description="For most small businesses, the win is not novelty. It is faster work, less friction, cleaner handoffs, and more confidence in how the business operates day to day."
+            description="For most small and medium businesses, the win is not novelty. It is faster work, less friction, cleaner handoffs, and more confidence in how the business operates day to day."
           />
         </div>
       </section>

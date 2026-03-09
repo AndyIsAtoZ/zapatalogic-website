@@ -6,7 +6,7 @@ import { buildPageMetadata } from "@/lib/site";
 export const metadata: Metadata = buildPageMetadata({
   title: "About ZapataLogic",
   description:
-    "Learn about ZapataLogic, an Apple-first consultant and technology advisory practice focused on growing small businesses.",
+    "Learn about ZapataLogic, an Apple-first consultant and technology advisory practice focused on growing small and medium businesses.",
   path: "/about",
 });
 
@@ -46,7 +46,7 @@ export default function AboutPage() {
             <SectionIntro
               eyebrow="Founder"
               title="Founded by Andy Zapata"
-              description="Andy Zapata founded ZapataLogic to help small businesses make better technology decisions and build cleaner operating environments around the way their teams actually work."
+              description="Andy Zapata founded ZapataLogic to help small and medium businesses make better technology decisions and build cleaner operating environments around the way their teams actually work."
             />
             <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600 md:text-lg">
               The focus is Apple-first consulting, strategic technology advisory, and practical AI implementation that improves execution instead of adding noise. The goal is a calmer, better-functioning operating environment for growing businesses.

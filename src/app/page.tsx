@@ -4,9 +4,9 @@ import { CTASection, PageHero, SectionIntro, ServiceCard } from "@/components/si
 import { buildPageMetadata } from "@/lib/site";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Apple Consultant and Technology Advisory for Small Business",
+  title: "Apple Consultant and Technology Advisory for Small and Medium Business",
   description:
-    "ZapataLogic provides Apple-first consulting, technology advisory, and practical AI enablement for small businesses that want cleaner operations, better systems decisions, and less workflow friction.",
+    "ZapataLogic provides Apple-first consulting, technology advisory, and practical AI enablement for small and medium businesses that want cleaner operations, better systems decisions, and less workflow friction.",
   path: "/",
 });
 
@@ -30,8 +30,8 @@ export default function HomePage() {
   return (
     <main>
       <PageHero
-        title="Apple Consultant and Technology Advisory for Growing Small Businesses"
-        description="ZapataLogic helps Apple-centric small businesses improve operations, make smarter technology decisions, and implement practical AI and automation where they create real business value."
+        title="Apple Consultant and Technology Advisory for Growing Small and Medium Businesses"
+        description="ZapataLogic helps Apple-centric small and medium businesses improve operations, make smarter technology decisions, and implement practical AI and automation where they create real business value."
         primaryLabel="Book a Strategy Call"
         primaryHref="/contact"
         secondaryLabel="Explore Services"
@@ -72,7 +72,7 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
           <SectionIntro
             eyebrow="Core value"
-            title="Technology strategy built for Apple-centric small businesses"
+            title="Technology strategy built for Apple-centric small and medium businesses"
             description="ZapataLogic helps growing businesses build cleaner Apple-first environments, reduce workflow friction, make better technology decisions, and implement practical automation that supports day-to-day operations."
           />
           <div className="space-y-8">
@@ -172,7 +172,7 @@ export default function HomePage() {
           <p className="mb-4 text-sm font-medium tracking-[0.1em] text-slate-500">Founder</p>
           <h2 className="max-w-4xl text-3xl font-semibold tracking-tight text-slate-950 md:text-5xl md:leading-tight">Founded by Andy Zapata</h2>
           <p className="mt-6 max-w-3xl text-base leading-8 text-slate-600 md:text-lg">
-            Andy Zapata founded ZapataLogic to help small businesses make better technology decisions and build cleaner operating environments around the way their teams actually work.
+            Andy Zapata founded ZapataLogic to help small and medium businesses make better technology decisions and build cleaner operating environments around the way their teams actually work.
           </p>
           <p className="mt-6 max-w-3xl text-base leading-8 text-slate-600 md:text-lg">
             The focus is Apple-first consulting, strategic technology advisory, and practical AI implementation that improves execution instead of adding noise.

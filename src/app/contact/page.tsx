@@ -6,7 +6,7 @@ import { buildPageMetadata } from "@/lib/site";
 export const metadata: Metadata = buildPageMetadata({
   title: "Contact ZapataLogic",
   description:
-    "Contact ZapataLogic to discuss Apple-first consulting, technology advisory, or practical AI enablement for your small business.",
+    "Contact ZapataLogic to discuss Apple-first consulting, technology advisory, or practical AI enablement for your small and medium business.",
   path: "/contact",
 });
 
