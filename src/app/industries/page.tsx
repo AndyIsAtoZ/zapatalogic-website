@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { CTASection, PageHero, SectionIntro } from "@/components/site";
+import { buildPageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Industries We Serve | ZapataLogic",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Industries We Serve",
   description:
     "See how ZapataLogic applies Apple-first consulting, technology advisory, and practical AI enablement for professional services, creative firms, real estate businesses, and founder-led small companies.",
-};
+  path: "/industries",
+});
 
 const industries = [
   {

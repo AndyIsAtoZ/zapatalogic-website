@@ -1,4 +1,7 @@
-export default function sitemap() {
+import type { MetadataRoute } from "next";
+import { absoluteUrl } from "@/lib/site";
+
+export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     "",
     "/ai-deployment",
@@ -10,7 +13,6 @@ export default function sitemap() {
   ];
 
   return routes.map((route) => ({
-    url: `https://zapatalogic.com${route}`,
-    lastModified: new Date(),
+    url: absoluteUrl(route || "/"),
   }));
 }

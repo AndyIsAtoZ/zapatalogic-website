@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SiteFooter, SiteHeader } from "@/components/site";
+import { absoluteUrl, organizationJsonLd, siteConfig } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,13 +15,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://zapatalogic.com"),
+  metadataBase: new URL(siteConfig.url),
   title: {
-    default: "ZapataLogic | Apple-First Technology Advisory for Small Business",
-    template: "%s",
+    default: `${siteConfig.name} | ${siteConfig.title}`,
+    template: `%s | ${siteConfig.name}`,
   },
-  description:
-    "ZapataLogic helps Apple-centric small businesses improve operations, make smarter technology decisions, and implement practical AI and automation where it creates real business value.",
+  description: siteConfig.description,
+  alternates: {
+    canonical: siteConfig.url,
+  },
   keywords: [
     "Apple-first consulting",
     "Apple business consultant",
@@ -29,20 +32,29 @@ export const metadata: Metadata = {
     "Apple-certified consultant",
     "Dallas Fort Worth technology consulting",
   ],
-  authors: [{ name: "ZapataLogic" }],
+  authors: [{ name: siteConfig.name }],
   openGraph: {
-    title: "ZapataLogic | Apple-First Technology Advisory for Small Business",
+    title: `${siteConfig.name} | ${siteConfig.title}`,
     description:
       "Apple-first consulting, technology advisory, and practical AI enablement for growing businesses.",
-    url: "https://zapatalogic.com",
-    siteName: "ZapataLogic",
+    url: siteConfig.url,
+    siteName: siteConfig.name,
     type: "website",
+    images: [
+      {
+        url: absoluteUrl(siteConfig.ogImage),
+        width: 491,
+        height: 400,
+        alt: `${siteConfig.name} logo`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ZapataLogic | Apple-First Technology Advisory for Small Business",
+    title: `${siteConfig.name} | ${siteConfig.title}`,
     description:
       "Apple-first consulting, technology advisory, and practical AI enablement for growing businesses.",
+    images: [absoluteUrl(siteConfig.ogImage)],
   },
   icons: {
     icon: [
@@ -59,9 +71,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = organizationJsonLd();
+
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} bg-white antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <div className="min-h-screen bg-white text-slate-900">
           <SiteHeader />
           {children}

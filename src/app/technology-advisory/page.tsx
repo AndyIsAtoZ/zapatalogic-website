@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { CTASection, PageHero, SectionIntro } from "@/components/site";
+import { buildPageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Technology Advisory for Growing Businesses | ZapataLogic",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Technology Advisory for Growing Businesses",
   description:
     "Strategic technology advisory for growing businesses, including systems guidance, vendor decisions, project prioritization, and operational alignment.",
-};
+  path: "/technology-advisory",
+});
 
 const advisoryAreas = [
   "Technology strategy for growing small businesses",

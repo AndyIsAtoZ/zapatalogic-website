@@ -1,12 +1,14 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import { CTASection, PageHero, SectionIntro } from "@/components/site";
+import { buildPageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "About | ZapataLogic",
+export const metadata: Metadata = buildPageMetadata({
+  title: "About",
   description:
     "Learn about ZapataLogic and its focus on Apple-first consulting, technology advisory, and practical AI enablement for growing small businesses.",
-};
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (

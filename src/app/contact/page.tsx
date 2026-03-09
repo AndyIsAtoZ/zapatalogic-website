@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/contact-form";
 import { PageHero } from "@/components/site";
+import { buildPageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Contact ZapataLogic",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Contact",
   description:
     "Contact ZapataLogic to discuss Apple-first consulting, technology advisory, or practical AI enablement for your business.",
-};
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { CTASection, PageHero, SectionIntro } from "@/components/site";
+import { buildPageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Apple-First Consulting for Business | ZapataLogic",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Apple-First Consulting for Business",
   description:
     "Apple-first consulting for business environments, with Apple-certified expertise, workflow alignment, and practical guidance for growing teams.",
-};
+  path: "/apple-first-consulting",
+});
 
 const focusAreas = [
   "Apple-centric environment design for real business workflows",

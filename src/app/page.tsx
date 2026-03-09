@@ -1,12 +1,14 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import { CTASection, PageHero, SectionIntro, ServiceCard } from "@/components/site";
+import { buildPageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "ZapataLogic | Apple-First Technology Advisory for Small Business",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Apple-First Technology Advisory for Small Business",
   description:
     "Apple-first consulting, technology advisory, and practical AI enablement for growing small businesses that want cleaner operations and smarter systems.",
-};
+  path: "/",
+});
 
 const credibilityItems = [
   "Apple-certified business expertise",

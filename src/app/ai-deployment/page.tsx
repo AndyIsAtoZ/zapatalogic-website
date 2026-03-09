@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { CTASection, PageHero, SectionIntro } from "@/components/site";
+import { buildPageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Practical AI Enablement for Small Business | ZapataLogic",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Practical AI Enablement for Small Business",
   description:
     "Practical AI enablement for small business with workflow identification, automation opportunities, tool selection, rollout planning, and adoption support.",
-};
+  path: "/ai-deployment",
+});
 
 const capabilities = [
   "Identify AI and automation opportunities tied to real operational friction",
