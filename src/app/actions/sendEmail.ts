@@ -15,7 +15,7 @@ export async function sendEmail(formData: FormData) {
 
   await resend.emails.send({
     from: "Zapatalogic <onboarding@resend.dev>",
-    to: ["info@zapatalogic.com"],
+    to: ["andy@zapatalogic.com"],
     subject: "New Website Inquiry",
     html: `
       <p><b>Name:</b> ${name}</p>
