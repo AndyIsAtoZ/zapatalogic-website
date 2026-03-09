@@ -103,7 +103,7 @@ export default function HomePage() {
           <SectionIntro
             eyebrow="Services"
             title="Three ways ZapataLogic helps businesses run technology more cleanly"
-            description="Apple-first consulting leads, advisory keeps decisions clear, and practical AI enablement supports better workflow execution."
+            description="Apple-first consulting is the foundation, technology advisory brings structure to decisions, and practical AI enablement improves workflow where it is actually useful."
           />
           <div className="mt-14 grid gap-8 lg:grid-cols-3">
             <ServiceCard
@@ -198,28 +198,15 @@ export default function HomePage() {
       </section>
 
       <section className="bg-[#f7f7f5] px-6 py-28 md:py-32">
-        <div className="mx-auto grid max-w-6xl gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-          <div className="mx-auto w-full max-w-sm overflow-hidden rounded-[2rem] bg-white shadow-[0_18px_60px_rgba(15,23,42,0.10)] ring-1 ring-slate-200/80">
-            <div className="relative aspect-[4/5] w-full bg-[#f3f3ef]">
-              <Image
-                src="/andy.jpg"
-                alt="Andy Zapata, founder"
-                fill
-                className="object-cover object-top"
-                sizes="(max-width: 1024px) 90vw, 380px"
-              />
-            </div>
-          </div>
-          <div>
-            <p className="mb-4 text-sm font-medium tracking-[0.12em] text-slate-500">Founder</p>
-            <h2 className="text-3xl font-semibold tracking-tight text-slate-950 md:text-5xl md:leading-tight">Founded by Andy Zapata</h2>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600 md:text-lg">
-              Andy Zapata founded ZapataLogic to help small businesses make better technology decisions and build cleaner operating environments around the way their teams actually work.
-            </p>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600 md:text-lg">
-              The focus is Apple-first consulting, strategic technology advisory, and practical AI implementation that improves execution instead of adding noise.
-            </p>
-          </div>
+        <div className="mx-auto max-w-6xl border-t border-slate-200 pt-14 md:pt-16">
+          <p className="mb-4 text-sm font-medium tracking-[0.12em] text-slate-500">Founder</p>
+          <h2 className="max-w-4xl text-3xl font-semibold tracking-tight text-slate-950 md:text-5xl md:leading-tight">Founded by Andy Zapata</h2>
+          <p className="mt-6 max-w-3xl text-base leading-8 text-slate-600 md:text-lg">
+            Andy Zapata founded ZapataLogic to help small businesses make better technology decisions and build cleaner operating environments around the way their teams actually work.
+          </p>
+          <p className="mt-6 max-w-3xl text-base leading-8 text-slate-600 md:text-lg">
+            The focus is Apple-first consulting, strategic technology advisory, and practical AI implementation that improves execution instead of adding noise.
+          </p>
         </div>
       </section>
 
