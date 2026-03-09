@@ -26,13 +26,14 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/60 bg-[rgba(252,252,251,0.82)] backdrop-blur-2xl">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:py-5">
-        <Link href="/" className="flex items-center gap-3">
-          <Image src="/logo.png" alt="ZapataLogic logo" width={138} height={36} className="h-9 w-auto" priority />
-          <div className="text-base font-semibold tracking-tight text-slate-950">ZapataLogic</div>
-        </Link>
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:py-5 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:py-5">
+        <div className="hidden lg:block" />
 
-        <nav className="hidden items-center gap-8 text-sm text-slate-600 lg:flex">
+        <nav className="hidden items-center justify-center gap-8 text-sm text-slate-600 lg:flex">
+          <Link href="/" className="flex items-center gap-3 transition hover:text-slate-950">
+            <Image src="/logo.png" alt="ZapataLogic logo" width={138} height={36} className="h-9 w-auto" priority />
+            <div className="text-base font-semibold tracking-tight text-slate-950">ZapataLogic</div>
+          </Link>
           {primaryNav.map((item) => (
             <Link key={item.href} href={item.href} className="transition hover:text-slate-950">
               {item.label}
@@ -40,7 +41,12 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3 lg:hidden">
+          <Image src="/logo.png" alt="ZapataLogic logo" width={138} height={36} className="h-9 w-auto" priority />
+          <div className="text-base font-semibold tracking-tight text-slate-950">ZapataLogic</div>
+        </Link>
+
+        <div className="flex items-center justify-end gap-3">
           <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger asChild>
               <Button variant="outline" size="icon" className="rounded-full border-slate-300 lg:hidden" aria-label="Open navigation menu">
