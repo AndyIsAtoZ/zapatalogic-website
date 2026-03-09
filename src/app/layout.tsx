@@ -16,33 +16,33 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://zapatalogic.com"),
   title: {
-    default: "ZapataLogic | AI Deployment and Technology Advisory for Small Business",
+    default: "ZapataLogic | Apple-First Technology Advisory for Small Business",
     template: "%s",
   },
   description:
-    "ZapataLogic helps growing small businesses deploy practical AI, improve operations, and make smarter technology decisions with Apple-first expertise in the Dallas–Fort Worth market.",
+    "ZapataLogic helps Apple-centric small businesses improve operations, make smarter technology decisions, and implement practical AI and automation where it creates real business value.",
   keywords: [
-    "AI deployment for small business",
-    "technology advisory",
-    "fractional technology leadership",
     "Apple-first consulting",
+    "Apple business consultant",
+    "technology advisory for small business",
+    "AI enablement for small business",
+    "Apple-certified consultant",
     "Dallas Fort Worth technology consulting",
-    "small business AI consulting",
   ],
   authors: [{ name: "ZapataLogic" }],
   openGraph: {
-    title: "ZapataLogic | AI Deployment and Technology Advisory for Small Business",
+    title: "ZapataLogic | Apple-First Technology Advisory for Small Business",
     description:
-      "Practical AI deployment, small business technology advisory, and Apple-first consulting for growing teams.",
+      "Apple-first consulting, technology advisory, and practical AI enablement for growing businesses.",
     url: "https://zapatalogic.com",
     siteName: "ZapataLogic",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ZapataLogic | AI Deployment and Technology Advisory for Small Business",
+    title: "ZapataLogic | Apple-First Technology Advisory for Small Business",
     description:
-      "Practical AI deployment, technology advisory, and Apple-first consulting for growing businesses.",
+      "Apple-first consulting, technology advisory, and practical AI enablement for growing businesses.",
   },
   icons: {
     icon: [

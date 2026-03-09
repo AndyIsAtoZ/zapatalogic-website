@@ -1,11 +1,11 @@
+import Image from "next/image";
 import type { Metadata } from "next";
-import { Card, CardContent } from "@/components/ui/card";
 import { CTASection, PageHero, SectionIntro } from "@/components/site";
 
 export const metadata: Metadata = {
   title: "About | ZapataLogic",
   description:
-    "Learn about ZapataLogic and its focus on AI deployment, technology advisory, and Apple-first consulting for growing small businesses.",
+    "Learn about ZapataLogic and its focus on Apple-first consulting, technology advisory, and practical AI enablement for growing small businesses.",
 };
 
 export default function AboutPage() {
@@ -13,53 +13,59 @@ export default function AboutPage() {
     <main>
       <PageHero
         eyebrow="About"
-        title="Strategic technology guidance for growing small businesses"
-        description="ZapataLogic helps businesses deploy practical AI, improve operations, and make smarter technology decisions. The work is built for leaders who need clarity, executive-friendly guidance, and cleaner execution."
+        title="Apple-first business technology guidance with a practical operating focus"
+        description="ZapataLogic helps growing businesses build cleaner Apple-centric environments, make smarter technology decisions, and adopt practical AI and automation where it creates real value."
         primaryLabel="Book a Strategy Call"
         primaryHref="/contact"
-        secondaryLabel="Explore Services"
-        secondaryHref="/ai-deployment"
+        secondaryLabel="Explore Apple-First Consulting"
+        secondaryHref="/apple-first-consulting"
       >
-        <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm shadow-slate-200/60">
-          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-blue-700">Business context</p>
-          <p className="mt-4 text-2xl font-semibold tracking-tight text-slate-950">Premium, practical, and built around execution.</p>
-          <p className="mt-4 text-base leading-7 text-slate-600">ZapataLogic combines AI deployment, technology advisory, and Apple-first expertise to help small businesses run with more focus and less friction.</p>
+        <div className="rounded-[2rem] bg-white p-8 shadow-[0_18px_60px_rgba(15,23,42,0.08)] ring-1 ring-slate-200/80 md:p-10">
+          <p className="text-sm font-medium tracking-[0.12em] text-slate-500">Positioning</p>
+          <p className="mt-4 text-3xl font-semibold tracking-tight text-slate-950">A business-first alternative to generic IT support.</p>
+          <p className="mt-5 text-base leading-8 text-slate-600">The emphasis is on Apple-first consulting, advisory judgment, and implementation that improves execution instead of creating more noise.</p>
         </div>
       </PageHero>
 
-      <section className="px-6 py-24">
+      <section className="px-6 py-28 md:py-32">
+        <div className="mx-auto grid max-w-6xl gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div className="mx-auto w-full max-w-sm overflow-hidden rounded-[2rem] bg-white shadow-[0_18px_60px_rgba(15,23,42,0.10)] ring-1 ring-slate-200/80">
+            <div className="relative aspect-[4/5] w-full bg-[#f3f3ef]">
+              <Image
+                src="/andy.jpg"
+                alt="Andy Zapata, founder of ZapataLogic"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 1024px) 90vw, 380px"
+              />
+            </div>
+          </div>
+          <div>
+            <SectionIntro
+              eyebrow="Founder"
+              title="Founded by Andy Zapata"
+              description="Andy Zapata founded ZapataLogic to help small businesses make better technology decisions and build cleaner operating environments around the way their teams actually work."
+            />
+            <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600 md:text-lg">
+              The focus is Apple-first consulting, strategic technology advisory, and practical AI implementation that improves execution instead of adding noise. The goal is a calmer, better-functioning operating environment for growing businesses.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#f7f7f5] px-6 py-28 md:py-32">
         <div className="mx-auto max-w-6xl">
           <SectionIntro
             eyebrow="How ZapataLogic is positioned"
-            title="A business-first alternative to generic IT support"
-            description="ZapataLogic is not positioned as a broad break-fix shop or a general menu of disconnected services. The emphasis is on practical implementation, sharper decisions, and a premium advisory experience for growing teams."
+            title="Practical, premium, and built around execution"
+            description="ZapataLogic is not a broad menu of disconnected services. It is a focused offer for businesses that need Apple-first expertise, sharper advisory support, and practical systems improvement."
           />
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            <Card className="rounded-[1.75rem] border-slate-200 shadow-sm shadow-slate-200/50">
-              <CardContent className="p-8">
-                <h2 className="text-xl font-semibold tracking-tight text-slate-950">AI deployment first</h2>
-                <p className="mt-4 text-base leading-7 text-slate-600">The primary focus is practical AI deployment that improves workflow, reduces wasted time, and supports better business execution.</p>
-              </CardContent>
-            </Card>
-            <Card className="rounded-[1.75rem] border-slate-200 shadow-sm shadow-slate-200/50">
-              <CardContent className="p-8">
-                <h2 className="text-xl font-semibold tracking-tight text-slate-950">Advisory for decision-makers</h2>
-                <p className="mt-4 text-base leading-7 text-slate-600">The work is designed for founders and leadership teams that need sharper technology guidance, better prioritization, and cleaner execution.</p>
-              </CardContent>
-            </Card>
-            <Card className="rounded-[1.75rem] border-slate-200 shadow-sm shadow-slate-200/50">
-              <CardContent className="p-8">
-                <h2 className="text-xl font-semibold tracking-tight text-slate-950">Apple-first differentiation</h2>
-                <p className="mt-4 text-base leading-7 text-slate-600">Apple expertise is a clear differentiator, especially for businesses in Dallas–Fort Worth with Apple-heavy teams and modern operating environments.</p>
-              </CardContent>
-            </Card>
-          </div>
         </div>
       </section>
 
       <CTASection
         title="Need a sharper technology direction for the business?"
-        description="ZapataLogic is built for decision-makers who want better systems, practical AI adoption, and cleaner execution across the company."
+        description="ZapataLogic is built for decision-makers who want a cleaner Apple environment, better systems judgment, and practical implementation support."
         primaryLabel="Book a Strategy Call"
         primaryHref="/contact"
         secondaryLabel="Contact ZapataLogic"

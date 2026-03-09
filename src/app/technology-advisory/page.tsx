@@ -1,63 +1,60 @@
 import type { Metadata } from "next";
-import { Card, CardContent } from "@/components/ui/card";
 import { CTASection, PageHero, SectionIntro } from "@/components/site";
 
 export const metadata: Metadata = {
   title: "Technology Advisory for Growing Businesses | ZapataLogic",
   description:
-    "Strategic technology advisory for growing businesses, including fractional technology leadership, vendor oversight, project planning, and operational systems guidance.",
+    "Strategic technology advisory for growing businesses, including systems guidance, vendor decisions, project prioritization, and operational alignment.",
 };
 
 const advisoryAreas = [
-  "Small business technology strategy",
-  "Fractional technology leadership",
-  "Vendor oversight and decision support",
-  "Project planning and prioritization",
+  "Technology strategy for growing small businesses",
+  "Vendor evaluation and decision support",
+  "Project prioritization and sequencing",
   "Operational systems guidance",
-  "Smarter business technology decisions as the company grows",
+  "Business-aligned recommendations instead of reactive noise",
+  "Sharper execution for founders and leadership teams",
 ];
 
 export default function TechnologyAdvisoryPage() {
   return (
     <main>
       <PageHero
-        eyebrow="Strategic guidance"
+        eyebrow="Advisory"
         title="Technology Advisory for Growing Businesses"
-        description="ZapataLogic provides strategic technology guidance for companies that need clearer decisions, stronger execution, and leadership that goes beyond reactive support."
+        description="ZapataLogic provides strategic technology guidance for businesses that need clearer decisions, stronger execution, and operational systems that support growth without unnecessary complexity."
         primaryLabel="Talk About Advisory Support"
         primaryHref="/contact"
-        secondaryLabel="Explore AI Deployment"
-        secondaryHref="/ai-deployment"
+        secondaryLabel="Explore Apple-First Consulting"
+        secondaryHref="/apple-first-consulting"
       >
-        <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm shadow-slate-200/60">
-          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-blue-700">Positioning</p>
-          <p className="mt-4 text-2xl font-semibold tracking-tight text-slate-950">A strategic partner for business technology decisions.</p>
-          <p className="mt-4 text-base leading-7 text-slate-600">This is built for decision-makers who need sound judgment on systems, vendors, priorities, and execution, without hiring full-time leadership too early.</p>
+        <div className="rounded-[2rem] bg-white p-8 shadow-[0_18px_60px_rgba(15,23,42,0.08)] ring-1 ring-slate-200/80 md:p-10">
+          <p className="text-sm font-medium tracking-[0.12em] text-slate-500">What it is</p>
+          <p className="mt-4 text-3xl font-semibold tracking-tight text-slate-950">A strategic layer for business technology decisions.</p>
+          <p className="mt-5 text-base leading-8 text-slate-600">This is built for leaders who need sound judgment on systems, vendors, priorities, and execution without defaulting to a generic managed-services model.</p>
         </div>
       </PageHero>
 
-      <section className="px-6 py-24">
+      <section className="px-6 py-28 md:py-32">
         <div className="mx-auto max-w-6xl">
           <SectionIntro
             eyebrow="What advisory covers"
             title="Technology guidance that supports growth, not noise"
-            description="The work is designed to help leadership teams make better calls on where technology is helping, where it is creating friction, and what should happen next."
+            description="The work is meant to help decision-makers make better calls on where technology is helping, where it is creating friction, and what should happen next."
           />
-          <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <div className="mt-14 grid gap-x-10 gap-y-10 md:grid-cols-2 xl:grid-cols-3">
             {advisoryAreas.map((item) => (
-              <Card key={item} className="rounded-[1.5rem] border-slate-200 shadow-sm shadow-slate-200/50">
-                <CardContent className="p-6">
-                  <p className="text-base font-medium leading-7 text-slate-800">{item}</p>
-                </CardContent>
-              </Card>
+              <div key={item} className="border-t border-slate-300 pt-5">
+                <p className="text-lg leading-8 text-slate-800">{item}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       <CTASection
-        title="Need clearer technology leadership as the business grows?"
-        description="ZapataLogic can help evaluate priorities, guide vendor decisions, shape initiatives, and keep technology aligned with business goals."
+        title="Need clearer technology direction as the business grows?"
+        description="ZapataLogic can help evaluate priorities, guide vendor decisions, shape initiatives, and keep business technology aligned with how the company actually operates."
         primaryLabel="Talk About Advisory Support"
         primaryHref="/contact"
         secondaryLabel="Contact ZapataLogic"

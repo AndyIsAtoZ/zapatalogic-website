@@ -1,63 +1,70 @@
 import type { Metadata } from "next";
-import { Card, CardContent } from "@/components/ui/card";
 import { CTASection, PageHero, SectionIntro } from "@/components/site";
 
 export const metadata: Metadata = {
   title: "Apple-First Consulting for Business | ZapataLogic",
   description:
-    "Apple-first consulting for business environments, including device strategy, Apple-heavy team support, and integration with broader business systems.",
+    "Apple-first consulting for business environments, with Apple-certified expertise, workflow alignment, and practical guidance for growing teams.",
 };
 
-const appleFocus = [
-  "Apple-centric business environments",
-  "Device strategy and environment design",
-  "Scaling Apple-heavy teams with less friction",
-  "Integration with broader business systems and workflows",
-  "Apple expertise positioned as a premium specialization",
+const focusAreas = [
+  "Apple-centric environment design for real business workflows",
+  "Planning and refining device strategy as the business grows",
+  "Reducing friction for Apple-heavy teams across daily operations",
+  "Aligning Apple environments with the rest of the business stack",
+  "Supporting decisions with Apple-certified expertise and business context",
 ];
 
 export default function AppleFirstConsultingPage() {
   return (
     <main>
       <PageHero
-        eyebrow="Specialization"
+        eyebrow="Primary service"
         title="Apple-First Consulting for Business Environments"
-        description="ZapataLogic helps businesses built around Apple devices create cleaner systems, scale with less friction, and connect Apple-first environments to the broader operating model."
-        primaryLabel="Discuss Your Apple Environment"
+        description="ZapataLogic helps Apple-centric businesses design cleaner technology environments, reduce operational friction, and make decisions that fit how their teams actually work."
+        primaryLabel="Book a Strategy Call"
         primaryHref="/contact"
-        secondaryLabel="Explore Industries"
-        secondaryHref="/industries"
+        secondaryLabel="Explore Technology Advisory"
+        secondaryHref="/technology-advisory"
       >
-        <div className="rounded-[2rem] bg-slate-950 p-8 text-white shadow-xl shadow-slate-300/40">
-          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-blue-300">Why it stands out</p>
-          <p className="mt-4 text-2xl font-semibold tracking-tight">Apple-first expertise that still stays grounded in business outcomes.</p>
-          <p className="mt-4 text-base leading-7 text-slate-300">This is a differentiator, not a distraction. The point is better execution for teams that already rely on Apple across the business.</p>
+        <div className="rounded-[2rem] bg-white p-8 shadow-[0_18px_60px_rgba(15,23,42,0.08)] ring-1 ring-slate-200/80 md:p-10">
+          <p className="text-sm font-medium tracking-[0.12em] text-slate-500">Why this leads</p>
+          <p className="mt-4 text-3xl font-semibold tracking-tight text-slate-950">Apple expertise is the differentiator. Business clarity is the point.</p>
+          <p className="mt-5 text-base leading-8 text-slate-600">The work is not generic support. It is Apple-first consulting shaped around operational fit, cleaner execution, and long-term decisions that make sense for the business.</p>
         </div>
       </PageHero>
 
-      <section className="px-6 py-24">
+      <section className="px-6 py-28 md:py-32">
         <div className="mx-auto max-w-6xl">
           <SectionIntro
-            eyebrow="Where it applies"
-            title="Built for businesses that want Apple expertise without a narrow lens"
-            description="Apple-first consulting works best when it improves the whole operating environment, including user experience, scalability, device management, and fit with the rest of the business stack."
+            eyebrow="What it covers"
+            title="Built for businesses that run on Apple"
+            description="Apple-first consulting works best when it improves the whole operating environment, including device experience, workflow alignment, scalability, and fit with the broader business stack."
           />
-          <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {appleFocus.map((item) => (
-              <Card key={item} className="rounded-[1.5rem] border-slate-200 shadow-sm shadow-slate-200/50">
-                <CardContent className="p-6">
-                  <p className="text-base font-medium leading-7 text-slate-800">{item}</p>
-                </CardContent>
-              </Card>
+          <div className="mt-14 grid gap-x-10 gap-y-10 md:grid-cols-2">
+            {focusAreas.map((item) => (
+              <div key={item} className="border-t border-slate-300 pt-5">
+                <p className="text-lg leading-8 text-slate-800">{item}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
+      <section className="bg-[#f7f7f5] px-6 py-28 md:py-32">
+        <div className="mx-auto max-w-6xl">
+          <SectionIntro
+            eyebrow="Positioning"
+            title="Apple-first, without becoming generic IT support"
+            description="ZapataLogic is designed for companies that want a more considered Apple environment and stronger technology decisions, not a commodity break-fix relationship."
+          />
+        </div>
+      </section>
+
       <CTASection
-        title="Need an Apple-first environment that scales more cleanly?"
-        description="Start with a practical conversation about where Apple expertise can reduce friction, improve team experience, and support the broader business environment."
-        primaryLabel="Discuss Your Apple Environment"
+        title="Need a cleaner Apple-first business environment?"
+        description="Start with a focused conversation about how your Apple environment, workflow design, and technology decisions can support the business more effectively."
+        primaryLabel="Book a Strategy Call"
         primaryHref="/contact"
         secondaryLabel="Contact ZapataLogic"
         secondaryHref="/contact"
