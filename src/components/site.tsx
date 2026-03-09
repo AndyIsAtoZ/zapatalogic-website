@@ -26,8 +26,8 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/88 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+    <header className="sticky top-0 z-50 border-b border-slate-200/60 bg-[rgba(252,252,251,0.82)] backdrop-blur-2xl">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:py-5">
         <Link href="/" className="flex items-center gap-3">
           <Image src="/logo.png" alt="ZapataLogic logo" width={138} height={36} className="h-9 w-auto" priority />
           <div>
@@ -36,7 +36,7 @@ export function SiteHeader() {
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-7 text-sm text-slate-700 lg:flex">
+        <nav className="hidden items-center gap-8 text-sm text-slate-600 lg:flex">
           {primaryNav.map((item) => (
             <Link key={item.href} href={item.href} className="transition hover:text-slate-950">
               {item.label}
@@ -45,7 +45,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Button asChild size="sm" className="hidden rounded-full bg-slate-950 px-5 text-white hover:bg-slate-800 sm:inline-flex">
+          <Button asChild size="sm" className="hidden rounded-full bg-slate-950 px-5 text-white shadow-none hover:bg-slate-800 sm:inline-flex">
             <Link href="/contact">Book a Strategy Call</Link>
           </Button>
 
@@ -89,7 +89,7 @@ export function SiteHeader() {
 export function SiteFooter() {
   return (
     <footer className="border-t border-slate-200 bg-[#f7f7f5]">
-      <div className="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
+      <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
         <div className="space-y-4">
           <p className="text-lg font-semibold tracking-tight text-slate-950">ZapataLogic</p>
           <p className="max-w-md text-sm leading-7 text-slate-600">
@@ -136,7 +136,7 @@ export function SectionIntro({
 }) {
   return (
     <div className={align === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
-      {eyebrow ? <p className="mb-4 text-sm font-medium tracking-[0.12em] text-slate-500">{eyebrow}</p> : null}
+      {eyebrow ? <p className="mb-4 text-sm font-medium tracking-[0.1em] text-slate-500">{eyebrow}</p> : null}
       <h2 className="text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl md:leading-tight">{title}</h2>
       {description ? <p className="mt-5 max-w-2xl text-base leading-8 text-slate-600 md:text-lg">{description}</p> : null}
     </div>
@@ -163,18 +163,18 @@ export function PageHero({
   children?: ReactNode;
 }) {
   return (
-    <section className="bg-[linear-gradient(180deg,#fcfcfb_0%,#f7f7f5_100%)]">
-      <div className="mx-auto grid max-w-6xl gap-16 px-6 py-24 md:py-32 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+    <section className="bg-[linear-gradient(180deg,#fcfcfb_0%,#f5f5f2_100%)]">
+      <div className="mx-auto grid max-w-6xl gap-18 px-6 py-28 md:py-36 lg:grid-cols-[1.02fr_0.98fr] lg:items-center">
         <div>
-          {eyebrow ? <p className="mb-5 text-sm font-medium tracking-[0.12em] text-slate-500">{eyebrow}</p> : null}
-          <h1 className="max-w-4xl text-4xl font-semibold tracking-tight text-slate-950 md:text-6xl md:leading-[1.02]">{title}</h1>
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">{description}</p>
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Button asChild size="lg" className="rounded-full bg-slate-950 px-6 text-white hover:bg-slate-800">
+          {eyebrow ? <p className="mb-5 text-sm font-medium tracking-[0.1em] text-slate-500">{eyebrow}</p> : null}
+          <h1 className="max-w-4xl text-[2.8rem] font-semibold tracking-[-0.04em] text-slate-950 md:text-[4.5rem] md:leading-[0.98]">{title}</h1>
+          <p className="mt-8 max-w-[40rem] text-[1.05rem] leading-8 text-slate-600 md:text-[1.2rem]">{description}</p>
+          <div className="mt-11 flex flex-wrap items-center gap-5">
+            <Button asChild size="lg" className="rounded-full bg-slate-950 px-6 text-white shadow-none hover:bg-slate-800">
               <Link href={primaryHref}>{primaryLabel}</Link>
             </Button>
             {secondaryLabel && secondaryHref ? (
-              <Button asChild variant="ghost" size="lg" className="rounded-full px-3 text-slate-700 hover:bg-transparent hover:text-slate-950">
+              <Button asChild variant="ghost" size="lg" className="rounded-full px-2 text-slate-600 shadow-none hover:bg-transparent hover:text-slate-950">
                 <Link href={secondaryHref}>
                   {secondaryLabel}
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -205,8 +205,8 @@ export function CTASection({
   secondaryHref?: string;
 }) {
   return (
-    <section className="bg-[#f7f7f5] px-6 py-28 md:py-32">
-      <div className="mx-auto max-w-6xl rounded-[2rem] bg-slate-950 px-8 py-14 text-white shadow-xl shadow-slate-300/30 md:px-12 md:py-16">
+    <section className="bg-[#f7f7f5] px-6 py-32 md:py-36">
+      <div className="mx-auto max-w-6xl rounded-[2rem] bg-slate-950 px-8 py-14 text-white shadow-[0_16px_50px_rgba(15,23,42,0.12)] md:px-12 md:py-16">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl">
             <p className="mb-4 text-sm font-medium tracking-[0.12em] text-slate-300">Next step</p>
@@ -231,7 +231,7 @@ export function CTASection({
 
 export function ServiceCard({ title, description, href, cta }: { title: string; description: string; href: string; cta: string }) {
   return (
-    <article className="flex h-full flex-col justify-between rounded-[1.75rem] bg-white p-8 shadow-[0_12px_40px_rgba(15,23,42,0.06)] ring-1 ring-slate-200/80">
+    <article className="flex h-full flex-col justify-between rounded-[1.75rem] bg-white p-9 shadow-[0_10px_30px_rgba(15,23,42,0.045)] ring-1 ring-slate-200/70 transition-transform duration-200 hover:-translate-y-0.5">
       <div>
         <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{title}</h3>
         <p className="mt-4 text-base leading-8 text-slate-600">{description}</p>

@@ -39,15 +39,15 @@ export default function HomePage() {
     <main>
       <PageHero
         title="Apple-First Technology Advisory for Growing Small Businesses"
-        description="ZapataLogic helps Apple-centric businesses improve operations, make smarter technology decisions, and implement practical AI and automation where it creates real business value."
+        description="ZapataLogic helps Apple-centric businesses improve operations, make smarter technology decisions, and implement practical AI and automation where they create real business value."
         primaryLabel="Book a Strategy Call"
         primaryHref="/contact"
         secondaryLabel="Explore Services"
         secondaryHref="#service-pathways"
       >
-        <div className="mx-auto w-full max-w-[28rem]">
-          <div className="overflow-hidden rounded-[2rem] bg-white shadow-[0_18px_60px_rgba(15,23,42,0.10)] ring-1 ring-slate-200/80">
-            <div className="relative aspect-[4/5] w-full bg-[#f3f3ef]">
+        <div className="mx-auto w-full max-w-[27rem] lg:mr-0">
+          <div className="overflow-hidden rounded-[2rem] bg-white shadow-[0_16px_48px_rgba(15,23,42,0.08)] ring-1 ring-slate-200/75">
+            <div className="relative aspect-[4/5] w-full bg-[#f2f2ee]">
               <Image
                 src="/andy.jpg"
                 alt="Andy Zapata, founder of ZapataLogic"
@@ -57,9 +57,9 @@ export default function HomePage() {
                 sizes="(max-width: 1024px) 92vw, 440px"
               />
             </div>
-            <div className="space-y-3 px-7 py-6">
-              <p className="text-sm font-medium tracking-[0.12em] text-slate-500">Founded by Andy Zapata</p>
-              <p className="text-xl font-semibold tracking-tight text-slate-950">Apple-first strategy, implementation, and practical operational guidance.</p>
+            <div className="space-y-3 px-7 py-6 md:px-8 md:py-7">
+              <p className="text-sm font-medium tracking-[0.1em] text-slate-500">Founded by Andy Zapata</p>
+              <p className="text-[1.35rem] font-semibold tracking-tight text-slate-950">Apple-first strategy, implementation, and practical operational guidance.</p>
               <p className="text-sm leading-7 text-slate-600">Apple-certified expertise for business environments built around Apple devices and workflows.</p>
             </div>
           </div>
@@ -67,17 +67,17 @@ export default function HomePage() {
       </PageHero>
 
       <section className="border-y border-slate-200 bg-white">
-        <div className="mx-auto grid max-w-6xl gap-5 px-6 py-7 md:grid-cols-5">
+        <div className="mx-auto grid max-w-6xl gap-5 px-6 py-8 md:grid-cols-5">
           {credibilityItems.map((item) => (
-            <p key={item} className="text-sm leading-6 text-slate-600">
+            <p key={item} className="text-sm leading-7 text-slate-500">
               {item}
             </p>
           ))}
         </div>
       </section>
 
-      <section className="px-6 py-28 md:py-32">
-        <div className="mx-auto grid max-w-6xl gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+      <section className="px-6 py-32 md:py-36">
+        <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
           <SectionIntro
             eyebrow="Core value"
             title="Technology strategy built for Apple-centric businesses"
@@ -98,7 +98,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="service-pathways" className="bg-[#f7f7f5] px-6 py-28 md:py-32">
+      <section id="service-pathways" className="bg-[#f7f7f5] px-6 py-32 md:py-36">
         <div className="mx-auto max-w-6xl">
           <SectionIntro
             eyebrow="Services"
@@ -128,7 +128,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="px-6 py-28 md:py-32">
+      <section className="px-6 py-32 md:py-36">
         <div className="mx-auto max-w-6xl">
           <SectionIntro
             eyebrow="Outcomes"
@@ -146,7 +146,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-[#f7f7f5] px-6 py-28 md:py-32">
+      <section className="bg-[#f7f7f5] px-6 py-32 md:py-36">
         <div className="mx-auto max-w-6xl">
           <SectionIntro
             eyebrow="Industries"
@@ -155,7 +155,7 @@ export default function HomePage() {
           />
           <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-5">
             {industryItems.map((item) => (
-              <div key={item} className="rounded-[1.5rem] bg-white p-6 shadow-[0_8px_30px_rgba(15,23,42,0.05)] ring-1 ring-slate-200/80">
+              <div key={item} className="rounded-[1.5rem] bg-white p-7 shadow-[0_8px_24px_rgba(15,23,42,0.04)] ring-1 ring-slate-200/70">
                 <p className="text-base font-medium leading-7 text-slate-900">{item}</p>
               </div>
             ))}
@@ -168,10 +168,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="px-6 py-28 md:py-32">
-        <div className="mx-auto grid max-w-6xl gap-14 lg:grid-cols-[1fr_0.95fr] lg:items-center">
+      <section className="px-6 py-32 md:py-36">
+        <div className="mx-auto grid max-w-6xl gap-18 lg:grid-cols-[1fr_0.95fr] lg:items-center">
           <div>
-            <p className="mb-4 text-sm font-medium tracking-[0.12em] text-slate-500">Apple-first differentiator</p>
+            <p className="mb-4 text-sm font-medium tracking-[0.1em] text-slate-500">Apple-first differentiator</p>
             <h2 className="text-3xl font-semibold tracking-tight text-slate-950 md:text-5xl md:leading-tight">Apple expertise that fits business reality</h2>
             <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600 md:text-lg">
               ZapataLogic is built for companies that run on Apple. That means understanding not just devices, but how Apple-first teams operate, collaborate, and scale inside real business environments.
@@ -180,8 +180,8 @@ export default function HomePage() {
               Apple-certified expertise helps ensure recommendations are grounded in the Apple ecosystem, while broader advisory work keeps the business as the priority.
             </p>
           </div>
-          <div className="rounded-[2rem] bg-slate-950 px-8 py-10 text-white shadow-[0_18px_60px_rgba(15,23,42,0.12)] md:px-10">
-            <p className="text-sm font-medium tracking-[0.12em] text-slate-300">What that means in practice</p>
+          <div className="rounded-[2rem] bg-slate-950 px-8 py-10 text-white shadow-[0_14px_42px_rgba(15,23,42,0.10)] md:px-10">
+            <p className="text-sm font-medium tracking-[0.1em] text-slate-300">What that means in practice</p>
             <div className="mt-8 space-y-6">
               {[
                 "Recommendations shaped around Apple-centric workflows, not generic Windows-first assumptions.",
@@ -197,9 +197,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-[#f7f7f5] px-6 py-28 md:py-32">
-        <div className="mx-auto max-w-6xl border-t border-slate-200 pt-14 md:pt-16">
-          <p className="mb-4 text-sm font-medium tracking-[0.12em] text-slate-500">Founder</p>
+      <section className="bg-[#f7f7f5] px-6 py-32 md:py-36">
+        <div className="mx-auto max-w-6xl border-t border-slate-200 pt-16 md:pt-20">
+          <p className="mb-4 text-sm font-medium tracking-[0.1em] text-slate-500">Founder</p>
           <h2 className="max-w-4xl text-3xl font-semibold tracking-tight text-slate-950 md:text-5xl md:leading-tight">Founded by Andy Zapata</h2>
           <p className="mt-6 max-w-3xl text-base leading-8 text-slate-600 md:text-lg">
             Andy Zapata founded ZapataLogic to help small businesses make better technology decisions and build cleaner operating environments around the way their teams actually work.
