@@ -1,7 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
 import type { Metadata } from "next";
-import { Button } from "@/components/ui/button";
 import { CTASection, PageHero, SectionIntro, ServiceCard } from "@/components/site";
 
 export const metadata: Metadata = {
@@ -24,14 +22,6 @@ const outcomes = [
   "Smarter business systems decisions",
   "Reduced wasted time",
   "Practical automation where it counts",
-];
-
-const industryItems = [
-  "Professional services",
-  "Creative and agency firms",
-  "Real estate and property teams",
-  "Founder-led small businesses",
-  "Apple-centric organizations",
 ];
 
 export default function HomePage() {
@@ -142,28 +132,6 @@ export default function HomePage() {
                 <p className="text-lg font-medium leading-8 text-slate-900">{item}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[#f7f7f5] px-6 py-32 md:py-36">
-        <div className="mx-auto max-w-6xl">
-          <SectionIntro
-            eyebrow="Industries"
-            title="Built for growing businesses that rely on Apple and need practical technology leadership"
-            description="Best suited for teams that want better operational clarity, stronger systems decisions, and a more considered technology environment."
-          />
-          <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-5">
-            {industryItems.map((item) => (
-              <div key={item} className="rounded-[1.5rem] bg-white p-7 shadow-[0_8px_24px_rgba(15,23,42,0.04)] ring-1 ring-slate-200/70">
-                <p className="text-base font-medium leading-7 text-slate-900">{item}</p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-10">
-            <Button asChild variant="ghost" size="lg" className="rounded-full px-3 text-slate-700 hover:bg-transparent hover:text-slate-950">
-              <Link href="/industries">Explore Industries</Link>
-            </Button>
           </div>
         </div>
       </section>

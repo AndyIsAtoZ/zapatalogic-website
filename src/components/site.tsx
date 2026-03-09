@@ -17,7 +17,6 @@ export const primaryNav = [
   { href: "/apple-first-consulting", label: "Apple-First Consulting" },
   { href: "/technology-advisory", label: "Technology Advisory" },
   { href: "/ai-deployment", label: "AI Enablement" },
-  { href: "/industries", label: "Industries" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
@@ -30,10 +29,7 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:py-5">
         <Link href="/" className="flex items-center gap-3">
           <Image src="/logo.png" alt="ZapataLogic logo" width={138} height={36} className="h-9 w-auto" priority />
-          <div>
-            <div className="text-base font-semibold tracking-tight text-slate-950">ZapataLogic</div>
-            <div className="hidden text-xs text-slate-500 sm:block">Apple-first consulting for growing businesses</div>
-          </div>
+          <div className="text-base font-semibold tracking-tight text-slate-950">ZapataLogic</div>
         </Link>
 
         <nav className="hidden items-center gap-8 text-sm text-slate-600 lg:flex">
@@ -45,10 +41,6 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Button asChild size="sm" className="hidden rounded-full bg-slate-950 px-5 text-white shadow-none hover:bg-slate-800 sm:inline-flex">
-            <Link href="/contact">Book a Strategy Call</Link>
-          </Button>
-
           <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger asChild>
               <Button variant="outline" size="icon" className="rounded-full border-slate-300 lg:hidden" aria-label="Open navigation menu">
@@ -72,11 +64,6 @@ export function SiteHeader() {
                     </Link>
                   ))}
                 </nav>
-                <Button asChild size="lg" className="mt-5 w-full rounded-full bg-slate-950 hover:bg-slate-800">
-                  <Link href="/contact" onClick={() => setOpen(false)}>
-                    Book a Strategy Call
-                  </Link>
-                </Button>
               </div>
             </DialogContent>
           </Dialog>
@@ -107,7 +94,6 @@ export function SiteFooter() {
             <Link href="/apple-first-consulting" className="block hover:text-slate-950">Apple-First Consulting</Link>
             <Link href="/technology-advisory" className="block hover:text-slate-950">Technology Advisory</Link>
             <Link href="/ai-deployment" className="block hover:text-slate-950">AI Enablement</Link>
-            <Link href="/industries" className="block hover:text-slate-950">Industries</Link>
           </div>
         </div>
 
