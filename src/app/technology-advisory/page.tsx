@@ -23,8 +23,8 @@ export default function TechnologyAdvisoryPage() {
     <main>
       <PageHero
         eyebrow="Advisory"
-        title="Technology Advisory for Small and Medium Business Growth"
-        description="ZapataLogic provides strategic technology guidance for businesses that need clearer decisions, stronger execution, and operational systems that support growth without unnecessary complexity."
+        title="Fractional CTO & Technology Advisory"
+        description="ZapataLogic provides fractional CTO services for businesses that need senior technology leadership without a full-time executive. The work includes setting priorities, guiding technology decisions, and keeping teams and vendors accountable, with particular depth in Apple-centric environments."
         primaryLabel="Talk About Advisory Support"
         primaryHref="/contact"
         secondaryLabel="Explore Apple-First Consulting"

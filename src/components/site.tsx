@@ -15,7 +15,7 @@ import { ArrowRight, Mail, MapPin, Menu } from "lucide-react";
 
 export const primaryNav = [
   { href: "/apple-first-consulting", label: "Apple-First Consulting" },
-  { href: "/technology-advisory", label: "Technology Advisory" },
+  { href: "/technology-advisory", label: "Fractional CTO" },
   { href: "/ai-deployment", label: "AI Enablement" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },

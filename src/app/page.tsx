@@ -105,8 +105,8 @@ export default function HomePage() {
               cta="Explore Apple-First Consulting"
             />
             <ServiceCard
-              title="Technology Advisory"
-              description="Get strategic guidance on systems, vendors, projects, and operational technology decisions as your business grows."
+              title="Fractional CTO & Technology Advisory"
+              description="Part-time technology leadership for Apple-centric businesses that need senior direction without hiring a full-time CTO."
               href="/technology-advisory"
               cta="Explore Technology Advisory"
             />
