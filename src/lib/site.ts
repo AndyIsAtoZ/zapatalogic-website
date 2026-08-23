@@ -3,12 +3,11 @@ import type { Metadata } from "next";
 export const siteConfig = {
   name: "ZapataLogic",
   url: "https://zapatalogic.com",
-  title: "Apple-First Technology Advisory for Small and Medium Business",
+  title: "Fractional CTO and Technology Leadership for Growing Businesses",
   description:
-    "ZapataLogic helps Apple-centric small and medium businesses improve operations, make smarter technology decisions, and implement practical AI and automation where it creates real business value.",
+    "ZapataLogic provides fractional CTO leadership across infrastructure, providers, endpoints, security, cloud platforms, and practical AI for growing businesses.",
   ogImage: "/icon.png",
-  email: "andy@zapatalogic.com",
-  phone: "+1-972-836-5142",
+  email: "info@zapatalogic.com",
   founder: "Andy Zapata",
   location: "Dallas-Fort Worth, Texas",
 };
@@ -67,7 +66,6 @@ export function organizationJsonLd() {
     logo: absoluteUrl(siteConfig.ogImage),
     image: absoluteUrl(siteConfig.ogImage),
     email: siteConfig.email,
-    telephone: siteConfig.phone,
     founder: {
       "@type": "Person",
       name: siteConfig.founder,
@@ -84,9 +82,10 @@ export function organizationJsonLd() {
     },
     description: siteConfig.description,
     serviceType: [
-      "Apple-first consulting",
-      "Technology advisory",
-      "AI enablement",
+      "Fractional CTO leadership",
+      "Apple-focused consulting",
+      "Infrastructure and provider guidance",
+      "AI implementation",
     ],
   };
 }

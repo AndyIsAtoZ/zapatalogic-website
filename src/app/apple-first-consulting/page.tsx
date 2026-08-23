@@ -5,7 +5,7 @@ import { buildPageMetadata } from "@/lib/site";
 export const metadata: Metadata = buildPageMetadata({
   title: "Apple Consultant for Small and Medium Business",
   description:
-    "Apple-first consulting for small and medium business environments, with Apple-certified expertise, workflow alignment, and practical guidance for growing teams.",
+    "Apple-focused consulting backed by twelve years of MSP experience and hands-on device management across macOS, Windows, and Android.",
   path: "/apple-first-consulting",
 });
 
@@ -21,18 +21,18 @@ export default function AppleFirstConsultingPage() {
   return (
     <main>
       <PageHero
-        eyebrow="Primary service"
+        eyebrow="Apple expertise"
         title="Apple Consultant for Small and Medium Business Environments"
-        description="ZapataLogic helps Apple-centric businesses design cleaner technology environments, reduce operational friction, and make decisions that fit how their teams actually work."
+        description="ZapataLogic brings twelve years of Apple-focused MSP experience and hands-on work across Jamf, Iru, Addigy, and Cisco Meraki Systems Manager. The result is an Apple-centered environment that remains secure, manageable, and compatible with the rest of the business."
         primaryLabel="Book a Strategy Call"
         primaryHref="/contact"
-        secondaryLabel="Explore Technology Advisory"
+        secondaryLabel="Explore Fractional CTO Services"
         secondaryHref="/technology-advisory"
       >
         <div className="rounded-[2rem] bg-white p-8 shadow-[0_18px_60px_rgba(15,23,42,0.08)] ring-1 ring-slate-200/80 md:p-10">
           <p className="text-sm font-medium tracking-[0.12em] text-slate-500">Why this leads</p>
-          <p className="mt-4 text-3xl font-semibold tracking-tight text-slate-950">Apple expertise is the differentiator. Business clarity is the point.</p>
-          <p className="mt-5 text-base leading-8 text-slate-600">The work is not generic support. It is Apple-first consulting shaped around operational fit, cleaner execution, and long-term decisions that make sense for the business.</p>
+          <p className="mt-4 text-3xl font-semibold tracking-tight text-slate-950">Apple-first does not mean Apple-only.</p>
+          <p className="mt-5 text-base leading-8 text-slate-600">ZapataLogic has managed more than 2,000 endpoints across macOS, Windows, and Android, including enrollment, policy enforcement, patching, identity controls, and remote lock and wipe.</p>
         </div>
       </PageHero>
 

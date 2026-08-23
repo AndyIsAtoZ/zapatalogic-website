@@ -6,7 +6,7 @@ import { buildPageMetadata } from "@/lib/site";
 export const metadata: Metadata = buildPageMetadata({
   title: "Contact ZapataLogic",
   description:
-    "Contact ZapataLogic to discuss Apple-first consulting, technology advisory, or practical AI enablement for your small and medium business.",
+    "Contact ZapataLogic to discuss fractional CTO leadership, infrastructure, providers, endpoints, security, or practical AI implementation.",
   path: "/contact",
 });
 
@@ -16,7 +16,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Contact"
         title="Book a Strategy Call"
-        description="Tell ZapataLogic what the business is trying to improve, where technology friction is showing up, and how Apple, operations, or automation fit into the next phase."
+        description="Tell ZapataLogic what the business is trying to improve and where infrastructure, providers, endpoints, security, business systems, or AI need clearer direction."
         primaryLabel="Contact ZapataLogic"
         primaryHref="#contact-form"
       >
@@ -24,8 +24,8 @@ export default function ContactPage() {
           <p className="text-sm font-medium tracking-[0.12em] text-slate-500">What to send</p>
           <ul className="mt-4 space-y-3 text-base leading-8 text-slate-600">
             <li>• The business problem or growth challenge</li>
-            <li>• Where Apple, operations, or technology decisions feel stuck</li>
-            <li>• Where automation or AI may help reduce friction</li>
+            <li>• Where technology ownership or provider accountability feels unclear</li>
+            <li>• Which infrastructure, endpoint, security, or AI decisions need direction</li>
           </ul>
         </div>
       </PageHero>
@@ -34,7 +34,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-3xl">
           <ContactForm
             title="Start a conversation"
-            intro="Share what the business is trying to improve, how your Apple environment fits into the picture, and where technology friction or practical automation could create leverage."
+            intro="Share what the business is trying to improve, who currently owns technology decisions, and where stronger direction or hands-on implementation would help."
           />
         </div>
       </section>

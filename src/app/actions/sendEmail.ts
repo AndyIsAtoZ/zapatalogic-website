@@ -17,8 +17,8 @@ export async function sendEmail(formData: FormData) {
   }
 
   const result = await resend.emails.send({
-    from: "ZapataLogic <andy@zapatalogic.com>",
-    to: ["andy@zapatalogic.com"],
+    from: "ZapataLogic <info@zapatalogic.com>",
+    to: ["info@zapatalogic.com"],
     replyTo: email || undefined,
     subject: `New Website Inquiry${name ? ` from ${name}` : ""}`,
     html: `

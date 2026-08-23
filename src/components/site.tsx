@@ -86,7 +86,7 @@ export function SiteFooter() {
         <div className="space-y-4">
           <p className="text-lg font-semibold tracking-tight text-slate-950">ZapataLogic</p>
           <p className="max-w-md text-sm leading-7 text-slate-600">
-            Apple-first consulting, technology advisory, and practical AI enablement for growing small and medium businesses that want cleaner operations and smarter systems.
+            Fractional CTO leadership, Apple-focused consulting, infrastructure and provider guidance, and practical AI implementation for growing businesses.
           </p>
           <div className="flex flex-wrap gap-4 text-sm text-slate-500">
             <span className="inline-flex items-center gap-2"><MapPin className="h-4 w-4" /> Dallas–Fort Worth</span>
@@ -98,7 +98,7 @@ export function SiteFooter() {
           <p className="mb-4 text-sm font-medium tracking-[0.12em] text-slate-500">Services</p>
           <div className="space-y-3 text-sm text-slate-600">
             <Link href="/apple-first-consulting" className="block hover:text-slate-950">Apple-First Consulting</Link>
-            <Link href="/technology-advisory" className="block hover:text-slate-950">Technology Advisory</Link>
+            <Link href="/technology-advisory" className="block hover:text-slate-950">Fractional CTO</Link>
             <Link href="/ai-deployment" className="block hover:text-slate-950">AI Enablement</Link>
           </div>
         </div>

@@ -4,23 +4,23 @@ import { CTASection, PageHero, SectionIntro, ServiceCard } from "@/components/si
 import { buildPageMetadata } from "@/lib/site";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Apple Consultant and Technology Advisory for Small and Medium Business",
+  title: "Fractional CTO and Technology Leadership for Growing Businesses",
   description:
-    "ZapataLogic provides Apple-first consulting, technology advisory, and practical AI enablement for small and medium businesses that want cleaner operations, better systems decisions, and less workflow friction.",
+    "ZapataLogic provides fractional CTO leadership across infrastructure, providers, endpoints, security, cloud platforms, and practical AI for growing businesses.",
   path: "/",
 });
 
 const credibilityItems = [
-  "Apple-certified business expertise",
-  "Apple-first environment design",
-  "Technology advisory for growing companies",
-  "Practical AI and automation",
-  "Security-minded, vendor-neutral guidance",
+  "Built and sold an Apple MSP",
+  "12 years on the provider side",
+  "2,000+ endpoints managed",
+  "macOS, Windows, and Android",
+  "Cloud and self-hosted AI systems",
 ];
 
 const outcomes = [
   "Less technology friction",
-  "Better Apple workflow alignment",
+  "Better endpoint and workflow alignment",
   "Smarter business systems decisions",
   "Reduced wasted time",
   "Practical automation where it counts",
@@ -30,8 +30,8 @@ export default function HomePage() {
   return (
     <main>
       <PageHero
-        title="Apple Consultant and Technology Advisory for Growing Small and Medium Businesses"
-        description="ZapataLogic helps Apple-centric small and medium businesses improve operations, make smarter technology decisions, and implement practical AI and automation where they create real business value."
+        title="Fractional CTO for Growing Businesses"
+        description="ZapataLogic helps businesses replace accumulated technology patchwork with infrastructure, providers, endpoints, security, and AI systems that can be managed. Andy Zapata brings twelve years building, operating, and selling an Apple-focused MSP and works from assessment through implementation and provider handoff."
         primaryLabel="Book a Strategy Call"
         primaryHref="/contact"
         secondaryLabel="Explore Services"
@@ -51,8 +51,8 @@ export default function HomePage() {
             </div>
             <div className="space-y-3 px-7 py-6 md:px-8 md:py-7">
               <p className="text-sm font-medium tracking-[0.1em] text-slate-500">Founded by Andy Zapata</p>
-              <p className="text-[1.35rem] font-semibold tracking-tight text-slate-950">Apple-first strategy, implementation, and practical operational guidance.</p>
-              <p className="text-sm leading-7 text-slate-600">Apple-certified expertise for business environments built around Apple devices and workflows.</p>
+              <p className="text-[1.35rem] font-semibold tracking-tight text-slate-950">Hands-on technology leadership from assessment through implementation.</p>
+              <p className="text-sm leading-7 text-slate-600">Deep Apple expertise across modern, cross-platform business environments.</p>
             </div>
           </div>
         </div>
@@ -71,16 +71,16 @@ export default function HomePage() {
       <section className="px-6 py-32 md:py-36">
         <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
           <SectionIntro
-            eyebrow="Core value"
-            title="Technology strategy built for Apple-centric small and medium businesses"
-            description="ZapataLogic helps growing businesses build cleaner Apple-first environments, reduce workflow friction, make better technology decisions, and implement practical automation that supports day-to-day operations."
+            eyebrow="Why clients call"
+            title="Technology problems rarely start as a plan. They accumulate."
+            description="A network gets extended instead of redesigned. A provider gets renewed instead of evaluated. Devices and access outgrow written policy. AI tools arrive before anyone decides what they are for. ZapataLogic helps leadership assess the whole environment, set priorities, and carry the work through."
           />
           <div className="space-y-8">
             {[
-              "Improve how Apple devices fit into real business workflows.",
-              "Reduce operational friction across teams and tools.",
-              "Make smarter decisions on systems, vendors, and projects.",
-              "Add practical AI and automation where it actually saves time.",
+              "Bring infrastructure, providers, endpoints, and business systems under a clear roadmap.",
+              "Evaluate MSPs and vendors from the client’s side of the contract.",
+              "Strengthen identity, security, continuity, and employee lifecycle controls.",
+              "Put AI into production where it can do measurable work.",
             ].map((item) => (
               <div key={item} className="border-b border-slate-200 pb-8 last:border-b-0 last:pb-0">
                 <p className="text-xl leading-8 text-slate-800">{item}</p>
@@ -95,24 +95,24 @@ export default function HomePage() {
           <SectionIntro
             eyebrow="Services"
             title="Three ways ZapataLogic helps businesses run technology more cleanly"
-            description="Apple-first consulting is the foundation, technology advisory brings structure to decisions, and practical AI enablement improves workflow where it is actually useful."
+            description="Fractional leadership sets direction, Apple expertise supports complex endpoint environments, and practical AI turns useful workflows into production systems."
           />
           <div className="mt-14 grid gap-8 lg:grid-cols-3">
             <ServiceCard
               title="Apple-First Consulting"
-              description="Design, optimize, and support business technology environments built around Apple devices, teams, and workflows."
+              description="Deep Apple experience across device management, identity, security, and operations—with the cross-platform knowledge required by real business environments."
               href="/apple-first-consulting"
               cta="Explore Apple-First Consulting"
             />
             <ServiceCard
               title="Fractional CTO & Technology Advisory"
-              description="Part-time technology leadership for Apple-centric businesses that need senior direction without hiring a full-time CTO."
+              description="Embedded technology leadership for businesses that need a roadmap, stronger provider accountability, and hands-on execution without hiring a full-time executive."
               href="/technology-advisory"
-              cta="Explore Technology Advisory"
+              cta="Explore Fractional CTO Services"
             />
             <ServiceCard
               title="AI Enablement"
-              description="Identify and implement practical AI and automation opportunities that improve workflow and reduce wasted time."
+              description="Platform evaluation, deployment, adoption, guardrails, and production agents across cloud and self-hosted environments."
               href="/ai-deployment"
               cta="Explore AI Enablement"
             />
@@ -142,12 +142,12 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-6xl gap-18 lg:grid-cols-[1fr_0.95fr] lg:items-center">
           <div>
             <p className="mb-4 text-sm font-medium tracking-[0.1em] text-slate-500">Apple-first differentiator</p>
-            <h2 className="text-3xl font-semibold tracking-tight text-slate-950 md:text-5xl md:leading-tight">Apple expertise that fits business reality</h2>
+            <h2 className="text-3xl font-semibold tracking-tight text-slate-950 md:text-5xl md:leading-tight">Apple depth without Apple-only assumptions</h2>
             <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600 md:text-lg">
-              ZapataLogic is built for companies that run on Apple. That means understanding not just devices, but how Apple-first teams operate, collaborate, and scale inside real business environments.
+              Apple is a deep area of expertise, not a requirement for working with ZapataLogic. The work accounts for how macOS, Windows, Android, identity, cloud services, and business systems operate together.
             </p>
             <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600 md:text-lg">
-              Apple-certified expertise helps ensure recommendations are grounded in the Apple ecosystem, while broader advisory work keeps the business as the priority.
+              Recommendations follow the business requirement while preserving the user experience, manageability, and security that Apple-centered teams expect.
             </p>
           </div>
           <div className="rounded-[2rem] bg-slate-950 px-8 py-10 text-white shadow-[0_14px_42px_rgba(15,23,42,0.10)] md:px-10">
@@ -172,17 +172,17 @@ export default function HomePage() {
           <p className="mb-4 text-sm font-medium tracking-[0.1em] text-slate-500">Founder</p>
           <h2 className="max-w-4xl text-3xl font-semibold tracking-tight text-slate-950 md:text-5xl md:leading-tight">Founded by Andy Zapata</h2>
           <p className="mt-6 max-w-3xl text-base leading-8 text-slate-600 md:text-lg">
-            Andy Zapata founded ZapataLogic to help small and medium businesses make better technology decisions and build cleaner operating environments around the way their teams actually work.
+            Andy Zapata is a fractional CTO and consultant Director of IT who spent twelve years co-founding and operating an Apple-focused managed services firm, which he later sold.
           </p>
           <p className="mt-6 max-w-3xl text-base leading-8 text-slate-600 md:text-lg">
-            The focus is Apple-first consulting, strategic technology advisory, and practical AI implementation that improves execution instead of adding noise.
+            Today, he helps leadership teams set roadmaps, manage providers, and carry infrastructure, endpoint, security, business-system, and AI initiatives through implementation and handoff.
           </p>
         </div>
       </section>
 
       <CTASection
-        title="Ready to run an Apple-first business environment more effectively?"
-        description="If your team relies on Apple and needs sharper technology direction, cleaner systems, or practical automation, start with a focused strategy call."
+        title="Need stronger technology direction and follow-through?"
+        description="If your business needs clearer ownership across infrastructure, providers, endpoints, security, or AI, start with a focused strategy call."
         primaryLabel="Book a Strategy Call"
         primaryHref="/contact"
         secondaryLabel="Contact ZapataLogic"

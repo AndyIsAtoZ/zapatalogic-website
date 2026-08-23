@@ -25,18 +25,18 @@ export const metadata: Metadata = {
     canonical: siteConfig.url,
   },
   keywords: [
+    "fractional CTO",
+    "consultant director of IT",
     "Apple-first consulting",
     "Apple business consultant",
-    "technology advisory for small and medium business",
+    "MSP selection and accountability",
     "AI enablement for small and medium business",
-    "Apple-certified consultant",
     "Dallas Fort Worth technology consulting",
   ],
   authors: [{ name: siteConfig.name }],
   openGraph: {
     title: `${siteConfig.name} | ${siteConfig.title}`,
-    description:
-      "Apple-first consulting, technology advisory, and practical AI enablement for growing businesses.",
+    description: siteConfig.description,
     url: siteConfig.url,
     siteName: siteConfig.name,
     type: "website",
@@ -52,8 +52,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: `${siteConfig.name} | ${siteConfig.title}`,
-    description:
-      "Apple-first consulting, technology advisory, and practical AI enablement for growing businesses.",
+    description: siteConfig.description,
     images: [absoluteUrl(siteConfig.ogImage)],
   },
   icons: {

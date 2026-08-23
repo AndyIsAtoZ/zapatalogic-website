@@ -5,7 +5,7 @@ import { buildPageMetadata } from "@/lib/site";
 export const metadata: Metadata = buildPageMetadata({
   title: "AI Enablement for Small and Medium Business",
   description:
-    "Practical AI enablement for small and medium business with workflow identification, automation opportunities, tool selection, rollout planning, and adoption support.",
+    "Practical AI platform evaluation, deployment, adoption, guardrails, and production agents across cloud and self-hosted environments.",
   path: "/ai-deployment",
 });
 
@@ -24,16 +24,16 @@ export default function AIDeploymentPage() {
       <PageHero
         eyebrow="AI capability"
         title="Practical AI Enablement for Small and Medium Business"
-        description="ZapataLogic helps growing businesses identify where AI and automation can create real operational value, choose the right tools, and implement them in a way teams can actually use."
+        description="ZapataLogic evaluates and deploys AI platforms based on data access, integration, policy controls, adoption, and business fit. Experience includes Claude, Gemini, ChatGPT, Microsoft platform evaluations, and self-hosted agents connected to live business systems."
         primaryLabel="Talk About AI Enablement"
         primaryHref="/contact"
-        secondaryLabel="Explore Technology Advisory"
+        secondaryLabel="Explore Fractional CTO Services"
         secondaryHref="/technology-advisory"
       >
         <div className="rounded-[2rem] bg-white p-8 shadow-[0_18px_60px_rgba(15,23,42,0.08)] ring-1 ring-slate-200/80 md:p-10">
           <p className="text-sm font-medium tracking-[0.12em] text-slate-500">How it fits</p>
           <p className="mt-4 text-3xl font-semibold tracking-tight text-slate-950">AI is a capability, not the identity.</p>
-          <p className="mt-5 text-base leading-8 text-slate-600">The focus is operational improvement: better workflows, less wasted time, and stronger execution inside the business you are already building.</p>
+          <p className="mt-5 text-base leading-8 text-slate-600">The work ranges from platform selection and usage policy to connected assistants, self-hosted models, and agents that produce reports, submit compliance data, and create transactions in live systems.</p>
         </div>
       </PageHero>
 

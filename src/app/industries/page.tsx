@@ -7,30 +7,30 @@ import { buildPageMetadata } from "@/lib/site";
 export const metadata: Metadata = buildPageMetadata({
   title: "Industries We Serve",
   description:
-    "See how ZapataLogic applies Apple-first consulting, technology advisory, and practical AI enablement for professional services, creative firms, real estate businesses, and founder-led small companies.",
+    "Fractional technology leadership for professional-services, real-estate, legal, healthcare, founder-led, and venture-backed organizations.",
   path: "/industries",
 });
 
 const industries = [
   {
     title: "Professional Services",
-    text: "Professional services firms benefit from cleaner Apple-centric workflows, sharper technology decisions, and practical automation that reduces administrative drag.",
-  },
-  {
-    title: "Creative and Agency Firms",
-    text: "Creative teams often rely heavily on Apple and need systems that support collaboration, execution, and operational consistency without slowing down client delivery.",
+    text: "Technology leadership across providers, endpoints, identity, security, business systems, and practical automation without adding a full-time executive role.",
   },
   {
     title: "Real Estate and Property Teams",
-    text: "Real estate and property-related businesses often need better workflow visibility, simpler technology decisions, and systems that scale with the pace of the business.",
+    text: "Infrastructure, network, provider, and systems decisions grounded in the needs of offices, multitenant properties, and distributed teams.",
   },
   {
-    title: "Founder-Led Small and Medium Businesses",
-    text: "Founder-led companies usually need clarity more than complexity. The work focuses on cleaner environments, better decision-making, and practical execution support.",
+    title: "Legal and Healthcare Organizations",
+    text: "Practical direction for access, device controls, data handling, business continuity, provider accountability, and policy-sensitive AI adoption.",
+  },
+  {
+    title: "Founder-Led and Venture-Backed Businesses",
+    text: "Roadmaps, controls, and operating systems that support growth, diligence, and stronger technology ownership as the organization scales.",
   },
   {
     title: "Apple-Centric Organizations",
-    text: "Some businesses are simply a better fit because Apple is already central to how their teams work. ZapataLogic is built for that reality.",
+    text: "Deep Apple and device-management experience paired with the cross-platform knowledge required by modern business environments.",
   },
 ];
 
@@ -40,7 +40,7 @@ export default function IndustriesPage() {
       <PageHero
         eyebrow="Industries"
         title="Industries We Serve"
-        description="ZapataLogic works best with growing businesses that rely on Apple, need sharper technology decisions, and want practical operational improvement without generic IT support noise."
+        description="ZapataLogic works with organizations that need stronger technology ownership, independent provider guidance, and hands-on execution across the operating environment."
         primaryLabel="Book a Strategy Call"
         primaryHref="/contact"
         secondaryLabel="Explore Apple-First Consulting"
@@ -48,7 +48,7 @@ export default function IndustriesPage() {
       >
         <div className="rounded-[2rem] bg-white p-8 shadow-[0_18px_60px_rgba(15,23,42,0.08)] ring-1 ring-slate-200/80 md:p-10">
           <p className="text-sm font-medium tracking-[0.12em] text-slate-500">Best fit</p>
-          <p className="mt-4 text-3xl font-semibold tracking-tight text-slate-950">Businesses that want sharper systems and less noise.</p>
+          <p className="mt-4 text-3xl font-semibold tracking-tight text-slate-950">Businesses that need direction and follow-through.</p>
         </div>
       </PageHero>
 
@@ -57,7 +57,7 @@ export default function IndustriesPage() {
           <SectionIntro
             eyebrow="Industry fit"
             title="The same three service lines, applied to different operating realities"
-            description="Apple-first consulting, technology advisory, and practical AI enablement stay consistent. The way they are applied changes based on workflow, growth stage, and team needs."
+            description="Fractional leadership, Apple-focused consulting, and practical AI implementation adapt to each organization’s workflow, risk, growth stage, and internal capabilities."
           />
           <div className="mt-14 grid gap-8 lg:grid-cols-2">
             {industries.map((industry) => (
@@ -69,7 +69,7 @@ export default function IndustriesPage() {
           </div>
           <div className="mt-10 flex flex-wrap gap-4">
             <Button asChild size="lg" className="rounded-full bg-slate-950 px-6 text-white hover:bg-slate-800">
-              <Link href="/technology-advisory">Talk About Advisory Support</Link>
+              <Link href="/technology-advisory">Explore Fractional CTO Services</Link>
             </Button>
             <Button asChild variant="ghost" size="lg" className="rounded-full px-3 text-slate-700 hover:bg-transparent hover:text-slate-950">
               <Link href="/ai-deployment">Explore AI Enablement</Link>
