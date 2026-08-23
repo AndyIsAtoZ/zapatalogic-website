@@ -14,11 +14,9 @@ import {
 import { ArrowRight, Mail, MapPin, Menu } from "lucide-react";
 
 export const primaryNav = [
-  { href: "/apple-first-consulting", label: "Apple-First Consulting" },
-  { href: "/technology-advisory", label: "Fractional CTO" },
-  { href: "/ai-deployment", label: "AI Enablement" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
+  { href: "/#services", label: "Services" },
+  { href: "/#about", label: "Experience" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export function SiteHeader() {
@@ -90,24 +88,16 @@ export function SiteFooter() {
           </p>
           <div className="flex flex-wrap gap-4 text-sm text-slate-500">
             <span className="inline-flex items-center gap-2"><MapPin className="h-4 w-4" /> Dallas–Fort Worth</span>
-            <span className="inline-flex items-center gap-2"><Mail className="h-4 w-4" /> info@zapatalogic.com</span>
+            <Link href="mailto:info@zapatalogic.com" className="inline-flex items-center gap-2 hover:text-slate-950"><Mail className="h-4 w-4" /> info@zapatalogic.com</Link>
           </div>
         </div>
 
-        <div>
-          <p className="mb-4 text-sm font-medium tracking-[0.12em] text-slate-500">Services</p>
+        <div className="md:col-span-2">
+          <p className="mb-4 text-sm font-medium tracking-[0.12em] text-slate-500">Navigate</p>
           <div className="space-y-3 text-sm text-slate-600">
-            <Link href="/apple-first-consulting" className="block hover:text-slate-950">Apple-First Consulting</Link>
-            <Link href="/technology-advisory" className="block hover:text-slate-950">Fractional CTO</Link>
-            <Link href="/ai-deployment" className="block hover:text-slate-950">AI Enablement</Link>
-          </div>
-        </div>
-
-        <div>
-          <p className="mb-4 text-sm font-medium tracking-[0.12em] text-slate-500">Company</p>
-          <div className="space-y-3 text-sm text-slate-600">
-            <Link href="/about" className="block hover:text-slate-950">About</Link>
-            <Link href="/contact" className="block hover:text-slate-950">Contact ZapataLogic</Link>
+            <Link href="/#services" className="block hover:text-slate-950">Services</Link>
+            <Link href="/#about" className="block hover:text-slate-950">Experience</Link>
+            <Link href="/#contact" className="block hover:text-slate-950">Contact</Link>
           </div>
         </div>
       </div>
@@ -140,7 +130,7 @@ export function PageHero({
   title,
   description,
   primaryLabel,
-  primaryHref = "/contact",
+  primaryHref = "#contact",
   secondaryLabel,
   secondaryHref,
   children,
@@ -181,59 +171,11 @@ export function PageHero({
   );
 }
 
-export function CTASection({
-  title,
-  description,
-  primaryLabel,
-  primaryHref = "/contact",
-  secondaryLabel,
-  secondaryHref,
-}: {
-  title: string;
-  description: string;
-  primaryLabel: string;
-  primaryHref?: string;
-  secondaryLabel?: string;
-  secondaryHref?: string;
-}) {
+export function ServiceCard({ title, description }: { title: string; description: string }) {
   return (
-    <section className="bg-[#f7f7f5] px-6 py-32 md:py-36">
-      <div className="mx-auto max-w-6xl rounded-[2rem] bg-slate-950 px-8 py-14 text-white shadow-[0_16px_50px_rgba(15,23,42,0.12)] md:px-12 md:py-16">
-        <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-          <div className="max-w-3xl">
-            <p className="mb-4 text-sm font-medium tracking-[0.12em] text-slate-300">Next step</p>
-            <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">{title}</h2>
-            <p className="mt-5 text-base leading-8 text-slate-300 md:text-lg">{description}</p>
-          </div>
-          <div className="flex flex-wrap gap-4">
-            <Button asChild size="lg" variant="secondary" className="rounded-full px-6 text-slate-950">
-              <Link href={primaryHref}>{primaryLabel}</Link>
-            </Button>
-            {secondaryLabel && secondaryHref ? (
-              <Button asChild size="lg" variant="outline" className="rounded-full border-white/20 bg-transparent px-6 text-white hover:bg-white hover:text-slate-950">
-                <Link href={secondaryHref}>{secondaryLabel}</Link>
-              </Button>
-            ) : null}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-export function ServiceCard({ title, description, href, cta }: { title: string; description: string; href: string; cta: string }) {
-  return (
-    <article className="flex h-full flex-col justify-between rounded-[1.75rem] bg-white p-9 shadow-[0_10px_30px_rgba(15,23,42,0.045)] ring-1 ring-slate-200/70 transition-transform duration-200 hover:-translate-y-0.5">
-      <div>
-        <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{title}</h3>
-        <p className="mt-4 text-base leading-8 text-slate-600">{description}</p>
-      </div>
-      <Button asChild variant="ghost" className="mt-8 h-auto justify-start px-0 text-base font-semibold text-slate-950 hover:bg-transparent hover:text-slate-700">
-        <Link href={href}>
-          {cta}
-          <ArrowRight className="ml-2 h-4 w-4" />
-        </Link>
-      </Button>
+    <article className="h-full rounded-[1.75rem] bg-white p-9 shadow-[0_10px_30px_rgba(15,23,42,0.045)] ring-1 ring-slate-200/70">
+      <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{title}</h3>
+      <p className="mt-4 text-base leading-8 text-slate-600">{description}</p>
     </article>
   );
 }
